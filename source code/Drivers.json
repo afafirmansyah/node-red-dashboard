@@ -1,0 +1,2096 @@
+[
+    {
+        "id": "4b24a0decd667fc2",
+        "type": "tab",
+        "label": "Drivers",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5ebef75bbb231b31",
+        "type": "ui_table",
+        "z": "4b24a0decd667fc2",
+        "group": "e2998f94abe8a2f6",
+        "name": "display drivers",
+        "order": 4,
+        "width": 12,
+        "height": 6,
+        "columns": [
+            {
+                "field": "driver_id",
+                "title": "Key / Code",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_name",
+                "title": "Driver Name",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_desc",
+                "title": "License Class",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 2120,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "dc8de88e831e2324",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "",
+        "name": "drivers table",
+        "x": 1850,
+        "y": 620,
+        "wires": [
+            [
+                "5ebef75bbb231b31"
+            ]
+        ]
+    },
+    {
+        "id": "12972bf0837453b9",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "show data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT * FROM drivers;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 620,
+        "wires": [
+            [
+                "dc8de88e831e2324"
+            ]
+        ]
+    },
+    {
+        "id": "ad7981c7e20ac3e2",
+        "type": "delay",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "210",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1390,
+        "y": 620,
+        "wires": [
+            [
+                "12972bf0837453b9",
+                "2c81d0b3085fc13f"
+            ]
+        ]
+    },
+    {
+        "id": "cc513368cdc85f24",
+        "type": "catch",
+        "z": "4b24a0decd667fc2",
+        "name": "catch",
+        "scope": null,
+        "uncaught": true,
+        "x": 1370,
+        "y": 800,
+        "wires": [
+            [
+                "b1cad2fa10e005b0",
+                "c4b376ccbd53349b"
+            ]
+        ]
+    },
+    {
+        "id": "b1cad2fa10e005b0",
+        "type": "debug",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "error",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "a3a88dd522ee8de2",
+        "type": "ui_toast",
+        "z": "4b24a0decd667fc2",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error: Contact administrator",
+        "name": "",
+        "x": 1850,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4b376ccbd53349b",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "your key has been registered!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 800,
+        "wires": [
+            [
+                "a3a88dd522ee8de2"
+            ]
+        ]
+    },
+    {
+        "id": "6b09752c2a3cd747",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "update statement",
+        "func": "msg.topic = \"UPDATE drivers SET driver_desc = '\" + msg.new_driver_desc + \"', driver_name = '\" + msg.new_driver_name + \"' WHERE driver_id = '\" + msg.new_driver_id + \"'\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 720,
+        "wires": [
+            [
+                "c5b8176962a880ae"
+            ]
+        ]
+    },
+    {
+        "id": "0356917a53b0d65f",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "",
+        "name": "drivers table",
+        "x": 1390,
+        "y": 280,
+        "wires": [
+            [
+                "3a7625f890204e24"
+            ]
+        ]
+    },
+    {
+        "id": "3a7625f890204e24",
+        "type": "switch",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1590,
+        "y": 280,
+        "wires": [
+            [
+                "ccb968cd60950b44"
+            ]
+        ]
+    },
+    {
+        "id": "72447c48a79592be",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "check drivers",
+        "func": "msg.topic = \"SELECT * FROM drivers WHERE driver_id='\" + msg.payload + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 280,
+        "wires": [
+            [
+                "0356917a53b0d65f"
+            ]
+        ]
+    },
+    {
+        "id": "4875daa5a43fa9eb",
+        "type": "ui_text_input",
+        "z": "4b24a0decd667fc2",
+        "name": "driver_id",
+        "label": "Key / Code *",
+        "tooltip": "",
+        "group": "4e51f179f34f89ef",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "72447c48a79592be",
+                "072b39654fd7fbbf",
+                "f715e19a7d6f020f"
+            ]
+        ]
+    },
+    {
+        "id": "4ff326afbed0db82",
+        "type": "ui_toast",
+        "z": "4b24a0decd667fc2",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error: Duplicate entry for key",
+        "name": "",
+        "x": 2110,
+        "y": 240,
+        "wires": [
+            [
+                "fdbd8ad9db180eb4"
+            ]
+        ]
+    },
+    {
+        "id": "8ed3f9c48c59c6b9",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "clear data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 360,
+        "wires": [
+            [
+                "4875daa5a43fa9eb",
+                "cbfaef47ec5a5c25",
+                "e4e01f8bc642bea5",
+                "3c43a0c31d36ddc8"
+            ]
+        ]
+    },
+    {
+        "id": "072b39654fd7fbbf",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "check vehicles",
+        "func": "msg.topic = \"SELECT * FROM vehicles WHERE vehicle_id='\" + msg.payload + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 220,
+        "wires": [
+            [
+                "dbe9351024ad8479"
+            ]
+        ]
+    },
+    {
+        "id": "dbe9351024ad8479",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "",
+        "name": "vehicle table",
+        "x": 1390,
+        "y": 220,
+        "wires": [
+            [
+                "9c9f3aa1ce8a49c8"
+            ]
+        ]
+    },
+    {
+        "id": "9c9f3aa1ce8a49c8",
+        "type": "switch",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1590,
+        "y": 220,
+        "wires": [
+            [
+                "35639d40728e873a"
+            ]
+        ]
+    },
+    {
+        "id": "35639d40728e873a",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "send failed message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "your key has been registered on vehicle!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1880,
+        "y": 220,
+        "wires": [
+            [
+                "4ff326afbed0db82"
+            ]
+        ]
+    },
+    {
+        "id": "ccb968cd60950b44",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "send failed message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "your key has been registered on driver!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1880,
+        "y": 280,
+        "wires": [
+            [
+                "4ff326afbed0db82"
+            ]
+        ]
+    },
+    {
+        "id": "f715e19a7d6f020f",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "driver_id",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 320,
+        "wires": [
+            [
+                "e3c750954295e5a6"
+            ]
+        ]
+    },
+    {
+        "id": "cbfaef47ec5a5c25",
+        "type": "ui_text_input",
+        "z": "4b24a0decd667fc2",
+        "name": "driver_name",
+        "label": "Driver Name",
+        "tooltip": "",
+        "group": "4e51f179f34f89ef",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 870,
+        "y": 400,
+        "wires": [
+            [
+                "9a82b37e4cf2d6e8"
+            ]
+        ]
+    },
+    {
+        "id": "e4e01f8bc642bea5",
+        "type": "ui_text_input",
+        "z": "4b24a0decd667fc2",
+        "name": "driver_desc",
+        "label": "License Class",
+        "tooltip": "",
+        "group": "4e51f179f34f89ef",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 870,
+        "y": 360,
+        "wires": [
+            [
+                "2ea73468fc53fd6b"
+            ]
+        ]
+    },
+    {
+        "id": "9a82b37e4cf2d6e8",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "driver_name",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ea73468fc53fd6b",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "driver_desc",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fdbd8ad9db180eb4",
+        "type": "link out",
+        "z": "4b24a0decd667fc2",
+        "name": "to clear",
+        "mode": "link",
+        "links": [
+            "1ae179dca3199b12",
+            "8a641f6badb7dedb"
+        ],
+        "x": 2300,
+        "y": 240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "8a641f6badb7dedb",
+        "type": "link in",
+        "z": "4b24a0decd667fc2",
+        "name": "from clear",
+        "links": [
+            "2c81d0b3085fc13f",
+            "fdbd8ad9db180eb4",
+            "d11adf21ed84e437"
+        ],
+        "x": 460,
+        "y": 320,
+        "wires": [
+            [
+                "8ed3f9c48c59c6b9"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "203f6c42a931b9eb",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    driver_id   : flow.get(\"driver_id\"),\n    driver_desc : flow.get(\"driver_desc\"),\n    driver_name : flow.get(\"driver_name\"),\n}\n//msg.payload=\"work order number \" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 620,
+        "wires": [
+            [
+                "d62a5962b55fc05c"
+            ]
+        ]
+    },
+    {
+        "id": "c5b8176962a880ae",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "",
+        "name": "drivers table",
+        "x": 1110,
+        "y": 620,
+        "wires": [
+            [
+                "ad7981c7e20ac3e2"
+            ]
+        ]
+    },
+    {
+        "id": "d62a5962b55fc05c",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "insert statement",
+        "func": "msg.topic = \"INSERT INTO drivers (driver_id, driver_desc, driver_name) \" + \n    \"VALUES ('\" + msg.driver_id +\"', '\" + msg.driver_desc +\"', '\" + msg.driver_name +\"');\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 620,
+        "wires": [
+            [
+                "c5b8176962a880ae"
+            ]
+        ]
+    },
+    {
+        "id": "2c81d0b3085fc13f",
+        "type": "link out",
+        "z": "4b24a0decd667fc2",
+        "name": "to clear",
+        "mode": "link",
+        "links": [
+            "1ae179dca3199b12",
+            "8a641f6badb7dedb"
+        ],
+        "x": 1600,
+        "y": 660,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "6cab4afd03cdc5de",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    delete_driver   : flow.get(\"delete_driver\"),\n}\n//msg.payload=\"work order number \" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 680,
+        "wires": [
+            [
+                "23707b1b8adb58c1"
+            ]
+        ]
+    },
+    {
+        "id": "3c43a0c31d36ddc8",
+        "type": "ui_text_input",
+        "z": "4b24a0decd667fc2",
+        "name": "delete_driver",
+        "label": "Key / Code *",
+        "tooltip": "",
+        "group": "998518b81f872043",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 870,
+        "y": 440,
+        "wires": [
+            [
+                "02f93b61c50e20d7",
+                "1e59fcd76b0e889a"
+            ]
+        ]
+    },
+    {
+        "id": "02f93b61c50e20d7",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delete_driver",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23707b1b8adb58c1",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "delete statement",
+        "func": "msg.topic = \"DELETE FROM drivers WHERE driver_id='\" + msg.delete_driver + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 680,
+        "wires": [
+            [
+                "c5b8176962a880ae"
+            ]
+        ]
+    },
+    {
+        "id": "c246d7b170a7995a",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "group": "998518b81f872043",
+        "name": "Delete",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Delete'})\"> \n    Delete<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 450,
+        "y": 680,
+        "wires": [
+            [
+                "6cab4afd03cdc5de"
+            ]
+        ]
+    },
+    {
+        "id": "05c3787dc8ee52f9",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "group": "4e51f179f34f89ef",
+        "name": "Add",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Add'})\"> \n    Add<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "203f6c42a931b9eb"
+            ]
+        ]
+    },
+    {
+        "id": "e848ba6a75b00ab6",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "group": "4e51f179f34f89ef",
+        "name": "Cancel",
+        "order": 5,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Cancel'})\"> \n    Cancel<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "8ed3f9c48c59c6b9"
+            ]
+        ]
+    },
+    {
+        "id": "e3c750954295e5a6",
+        "type": "switch",
+        "z": "4b24a0decd667fc2",
+        "name": "is text empty?",
+        "property": "driver_id",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1400,
+        "y": 340,
+        "wires": [
+            [
+                "bfc0025bd4d61932"
+            ],
+            [
+                "2764240ba00f4e9e"
+            ]
+        ]
+    },
+    {
+        "id": "bfc0025bd4d61932",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 340,
+        "wires": [
+            [
+                "cfe2ccba047b01d0"
+            ]
+        ]
+    },
+    {
+        "id": "2764240ba00f4e9e",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 380,
+        "wires": [
+            [
+                "cfe2ccba047b01d0"
+            ]
+        ]
+    },
+    {
+        "id": "cfe2ccba047b01d0",
+        "type": "link out",
+        "z": "4b24a0decd667fc2",
+        "name": "to add",
+        "mode": "link",
+        "links": [
+            "66dbc4f2bc584a4f"
+        ],
+        "x": 1830,
+        "y": 360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "66dbc4f2bc584a4f",
+        "type": "link in",
+        "z": "4b24a0decd667fc2",
+        "name": "from add",
+        "links": [
+            "cfe2ccba047b01d0"
+        ],
+        "x": 280,
+        "y": 620,
+        "wires": [
+            [
+                "05c3787dc8ee52f9"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "72171547a99bca2f",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "group": "e2998f94abe8a2f6",
+        "name": "Refresh",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: ''})\"> \n    Refresh <i class=\"fa fa-refresh\" aria-hidden=\"true\"></i><br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1100,
+        "y": 680,
+        "wires": [
+            [
+                "ad7981c7e20ac3e2",
+                "1b0ee17426d10b99"
+            ]
+        ]
+    },
+    {
+        "id": "7f46dca6cbc44ee7",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "search statement",
+        "func": "msg.topic = \"SELECT * FROM drivers WHERE driver_id LIKE '%\" + msg.search_data + \"%' OR driver_desc LIKE '%\" + msg.search_data + \"%' OR driver_name LIKE '%\" + msg.search_data + \"%';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 540,
+        "wires": [
+            [
+                "dc8de88e831e2324"
+            ]
+        ]
+    },
+    {
+        "id": "37d22a0be73d785d",
+        "type": "ui_text_input",
+        "z": "4b24a0decd667fc2",
+        "name": "search_data",
+        "label": "Type to search ..",
+        "tooltip": "",
+        "group": "e2998f94abe8a2f6",
+        "order": 2,
+        "width": 9,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 870,
+        "y": 580,
+        "wires": [
+            [
+                "b265bf9a208f714e"
+            ]
+        ]
+    },
+    {
+        "id": "b265bf9a208f714e",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "search_data",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 580,
+        "wires": [
+            [
+                "69a3bb44f9f2b79b",
+                "746734b0559aee08"
+            ]
+        ]
+    },
+    {
+        "id": "746734b0559aee08",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    search_data   : flow.get(\"search_data\"),\n}\n//msg.payload=\"work order number \" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 540,
+        "wires": [
+            [
+                "7f46dca6cbc44ee7"
+            ]
+        ]
+    },
+    {
+        "id": "69a3bb44f9f2b79b",
+        "type": "switch",
+        "z": "4b24a0decd667fc2",
+        "name": "is text empty?",
+        "property": "driver_id",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1400,
+        "y": 580,
+        "wires": [
+            [
+                "12972bf0837453b9"
+            ]
+        ]
+    },
+    {
+        "id": "5306f52d24015cea",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "group": "e2998f94abe8a2f6",
+        "name": "icon",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "format": "\n<md-button style=\"background-color:#007CBE\"> \n    <i class=\"fa fa-search\" aria-hidden=\"true\"></i><br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 450,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43c08386ae06b7f5",
+        "type": "link in",
+        "z": "4b24a0decd667fc2",
+        "name": "from search",
+        "links": [
+            "a41bd6d80aa5891b"
+        ],
+        "x": 650,
+        "y": 580,
+        "wires": [
+            [
+                "37d22a0be73d785d"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "1b0ee17426d10b99",
+        "type": "delay",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "210",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1390,
+        "y": 700,
+        "wires": [
+            [
+                "a41bd6d80aa5891b"
+            ]
+        ]
+    },
+    {
+        "id": "a41bd6d80aa5891b",
+        "type": "link out",
+        "z": "4b24a0decd667fc2",
+        "name": "to search",
+        "mode": "link",
+        "links": [
+            "43c08386ae06b7f5"
+        ],
+        "x": 1600,
+        "y": 700,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2ff00584398567d2",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "group": "31e0e13b0b941009",
+        "name": "Update",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Update'})\"> \n    Update<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 460,
+        "y": 720,
+        "wires": [
+            [
+                "56f2971494ec5ceb"
+            ]
+        ]
+    },
+    {
+        "id": "56f2971494ec5ceb",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    new_driver_id: flow.get(\"new_driver_id\"),\n    new_driver_desc: flow.get(\"new_driver_desc\"),\n    new_driver_name: flow.get(\"new_driver_name\"),\n}\n//msg.payload=\"work order number \" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 720,
+        "wires": [
+            [
+                "6b09752c2a3cd747"
+            ]
+        ]
+    },
+    {
+        "id": "8abdbca10c96de96",
+        "type": "ui_text_input",
+        "z": "4b24a0decd667fc2",
+        "name": "new_driver_id",
+        "label": "Key / Code *",
+        "tooltip": "",
+        "group": "31e0e13b0b941009",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 880,
+        "y": 780,
+        "wires": [
+            [
+                "cffe44663ff96d0f",
+                "ecaae7543e9f1944"
+            ]
+        ]
+    },
+    {
+        "id": "9ed87c8f0b6069e2",
+        "type": "ui_text_input",
+        "z": "4b24a0decd667fc2",
+        "name": "new_driver_desc",
+        "label": "License Class",
+        "tooltip": "",
+        "group": "31e0e13b0b941009",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 890,
+        "y": 820,
+        "wires": [
+            [
+                "501150df02bcd3fe"
+            ]
+        ]
+    },
+    {
+        "id": "4e75f60ecbebe209",
+        "type": "ui_text_input",
+        "z": "4b24a0decd667fc2",
+        "name": "new_driver_name",
+        "label": "Driver Name",
+        "tooltip": "",
+        "group": "31e0e13b0b941009",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 890,
+        "y": 860,
+        "wires": [
+            [
+                "4780323e9324faa4"
+            ]
+        ]
+    },
+    {
+        "id": "cffe44663ff96d0f",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "new_driver_id",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "501150df02bcd3fe",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "new_driver_desc",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4780323e9324faa4",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "new_driver_name",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0bd7a0469df93951",
+        "type": "switch",
+        "z": "4b24a0decd667fc2",
+        "name": "is text empty?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1620,
+        "y": 740,
+        "wires": [
+            [
+                "e9e91646a4c043ba"
+            ],
+            [
+                "5dacc58aafb029bd"
+            ]
+        ]
+    },
+    {
+        "id": "e9e91646a4c043ba",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1850,
+        "y": 720,
+        "wires": [
+            [
+                "0a446d8501d06397"
+            ]
+        ]
+    },
+    {
+        "id": "5dacc58aafb029bd",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1850,
+        "y": 760,
+        "wires": [
+            [
+                "0a446d8501d06397"
+            ]
+        ]
+    },
+    {
+        "id": "d4af2c06b44c539f",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "group": "31e0e13b0b941009",
+        "name": "Cancel",
+        "order": 5,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Cancel'})\"> \n    Cancel<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 460,
+        "y": 820,
+        "wires": [
+            [
+                "0c00f939630fb938"
+            ]
+        ]
+    },
+    {
+        "id": "0c00f939630fb938",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "clear data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 820,
+        "wires": [
+            [
+                "9ed87c8f0b6069e2",
+                "8abdbca10c96de96",
+                "4e75f60ecbebe209"
+            ]
+        ]
+    },
+    {
+        "id": "0a446d8501d06397",
+        "type": "link out",
+        "z": "4b24a0decd667fc2",
+        "name": "to update",
+        "mode": "link",
+        "links": [
+            "033cc94b4c52c579"
+        ],
+        "x": 2100,
+        "y": 740,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "033cc94b4c52c579",
+        "type": "link in",
+        "z": "4b24a0decd667fc2",
+        "name": "from update",
+        "links": [
+            "0a446d8501d06397"
+        ],
+        "x": 270,
+        "y": 720,
+        "wires": [
+            [
+                "2ff00584398567d2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "1ae179dca3199b12",
+        "type": "link in",
+        "z": "4b24a0decd667fc2",
+        "name": "from clear",
+        "links": [
+            "2c81d0b3085fc13f",
+            "fdbd8ad9db180eb4",
+            "d11adf21ed84e437"
+        ],
+        "x": 460,
+        "y": 780,
+        "wires": [
+            [
+                "0c00f939630fb938"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "ecaae7543e9f1944",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "check drivers",
+        "func": "msg.topic = \"SELECT * FROM drivers WHERE driver_id='\" + msg.payload + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 740,
+        "wires": [
+            [
+                "fe9061ed7cade7c4"
+            ]
+        ]
+    },
+    {
+        "id": "fe9061ed7cade7c4",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "",
+        "name": "drivers table",
+        "x": 1390,
+        "y": 740,
+        "wires": [
+            [
+                "0bd7a0469df93951"
+            ]
+        ]
+    },
+    {
+        "id": "1e59fcd76b0e889a",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "check drivers",
+        "func": "msg.topic = \"SELECT * FROM drivers WHERE driver_id='\" + msg.payload + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1114,
+        "y": 478,
+        "wires": [
+            [
+                "61efd993c48c584a"
+            ]
+        ]
+    },
+    {
+        "id": "61efd993c48c584a",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "",
+        "name": "drivers table",
+        "x": 1390,
+        "y": 480,
+        "wires": [
+            [
+                "a6a8069c60e32737"
+            ]
+        ]
+    },
+    {
+        "id": "a6a8069c60e32737",
+        "type": "switch",
+        "z": "4b24a0decd667fc2",
+        "name": "is text empty?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1620,
+        "y": 480,
+        "wires": [
+            [
+                "29364656fcd22b8d"
+            ],
+            [
+                "3f47b7502081fd0d"
+            ]
+        ]
+    },
+    {
+        "id": "29364656fcd22b8d",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1850,
+        "y": 460,
+        "wires": [
+            [
+                "afad9c2e57b07168"
+            ]
+        ]
+    },
+    {
+        "id": "3f47b7502081fd0d",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1850,
+        "y": 500,
+        "wires": [
+            [
+                "afad9c2e57b07168"
+            ]
+        ]
+    },
+    {
+        "id": "afad9c2e57b07168",
+        "type": "link out",
+        "z": "4b24a0decd667fc2",
+        "name": "to delete",
+        "mode": "link",
+        "links": [
+            "36d303f5fb4e631f",
+            "44ae6b3fd5a26d27"
+        ],
+        "x": 2100,
+        "y": 480,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "36d303f5fb4e631f",
+        "type": "link in",
+        "z": "4b24a0decd667fc2",
+        "name": "from delete",
+        "links": [
+            "afad9c2e57b07168"
+        ],
+        "x": 280,
+        "y": 680,
+        "wires": [
+            [
+                "c246d7b170a7995a"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "fda90bead84ea669",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "d": true,
+        "group": "e2998f94abe8a2f6",
+        "name": "CSS",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .tabulator {\n        padding-left: 2px;\n        border: 0px solid #BBB;\n        background-color: #111217;\n        font-size: 18px;\n        font-family: \"Times New Roman\", serif;\n    }\n\n    /****/\n\n    /* Header formatieren */\n    .tabulator-col-title {\n        background-color: gold;\n        color: blue;\n        font-family: \"Comic Sans MS\", sans-serif;\n    }\n\n    /****/\n    .tabulator .tabulator-header {\n        border-bottom: 1px solid #BBB;\n    }\n\n    .tabulator-col-content {\n        background-color: #111217;\n        height: 37px\n    }\n\n    .tabulator .tabulator-header .tabulator-col {\n        border-right: 0px solid #aaa;\n        background-color: #111217\n    }\n\n    .tabulator-arrow {\n        visibility: collapse;\n    }\n\n    .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {\n        padding-right: 2px;\n    }\n\n    /* Zellen formatieren*/\n    .tabulator-table .tabulator-row-odd {\n        min-height: 31px;\n        background-color: yellow;\n        color: red;\n    }\n\n    /****/\n    .tabulator-table .tabulator-row-even {\n        min-height: 31px;\n        background-color: red;\n        color: yellow;\n    }\n\n    /****/\n    .tabulator-row .tabulator-cell {\n        border-right: 0px solid #888;\n        padding-top: 4px;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 2090,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "441137ead67cd1e8",
+        "type": "ui_template",
+        "z": "4b24a0decd667fc2",
+        "d": true,
+        "group": "e2998f94abe8a2f6",
+        "name": "CSS",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n.tabulator-table {\n    background: transparent !important;*/\n    font-size: 28px !important;\n}\n.tabulator-row .tabulator-cell{\n    border-right: 1px solid #8880 !important;\n}\n.tabulator-row{\n    font-size: 28px !important;\n    background-color: #713b3b !important;\n}\n.tabulator-row:nth-child(2n){\n    font-size: 28px !important;\n    background-color: #8e000000 !important;\n}\n\n.tabulator-header{\n    border-bottom: 2px solid #dd0000 !important;\n    font-size: 46px !important;\n}\n\n.nr-dashboard-ui_table{\n    background-color: transparent !important;\n    font-size: 36px !important;\n}\n\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 2090,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3f1502fceaaec90",
+        "type": "inject",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM drivers WHERE driver_flag=0;",
+        "x": 750,
+        "y": 1040,
+        "wires": [
+            [
+                "b429daca8c24dc1a"
+            ]
+        ]
+    },
+    {
+        "id": "b429daca8c24dc1a",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "",
+        "name": "",
+        "x": 930,
+        "y": 1040,
+        "wires": [
+            [
+                "cbcb3bcfc3440a5c"
+            ]
+        ]
+    },
+    {
+        "id": "cbcb3bcfc3440a5c",
+        "type": "switch",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1110,
+        "y": 1040,
+        "wires": [
+            [],
+            [
+                "4d378468bc8f8686",
+                "dc23f6fe3f2102be",
+                "73d24246ca4dc6be"
+            ]
+        ]
+    },
+    {
+        "id": "4d378468bc8f8686",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "insert statement",
+        "func": "msg.topic = \"INSERT INTO drivers (driver_id, driver_desc, driver_name, driver_flag) \" +\n    \"VALUES ('\" + msg.payload[0].driver_id + \"', '\" + msg.payload[0].driver_desc + \"', '\" + msg.payload[0].driver_name + \"', '1' );\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1040,
+        "wires": [
+            [
+                "4688a45678db0f1f"
+            ]
+        ]
+    },
+    {
+        "id": "4688a45678db0f1f",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "347578936cd017ea",
+        "name": "",
+        "x": 1510,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1fa46778865d059d",
+        "type": "mysql",
+        "z": "4b24a0decd667fc2",
+        "mydb": "",
+        "name": "",
+        "x": 1570,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc23f6fe3f2102be",
+        "type": "function",
+        "z": "4b24a0decd667fc2",
+        "name": "set statement",
+        "func": "msg.topic = \"UPDATE drivers SET driver_flag = 1 WHERE id = '\" + msg.payload[0].id + \"'\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1100,
+        "wires": [
+            [
+                "7f0c415c0f802327"
+            ]
+        ]
+    },
+    {
+        "id": "7f0c415c0f802327",
+        "type": "delay",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1455,
+        "y": 1100,
+        "wires": [
+            [
+                "1fa46778865d059d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "847d400a4abea967",
+        "type": "change",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "SELECT * FROM drivers WHERE driver_flag=0;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1360,
+        "y": 1140,
+        "wires": [
+            [
+                "8ded31a9dad9618b"
+            ]
+        ]
+    },
+    {
+        "id": "73d24246ca4dc6be",
+        "type": "delay",
+        "z": "4b24a0decd667fc2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1235,
+        "y": 1140,
+        "wires": [
+            [
+                "847d400a4abea967"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8ded31a9dad9618b",
+        "type": "link out",
+        "z": "4b24a0decd667fc2",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "b301c4d15c8c0aeb"
+        ],
+        "x": 1485,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "b301c4d15c8c0aeb",
+        "type": "link in",
+        "z": "4b24a0decd667fc2",
+        "name": "link in 3",
+        "links": [
+            "8ded31a9dad9618b"
+        ],
+        "x": 785,
+        "y": 1080,
+        "wires": [
+            [
+                "b429daca8c24dc1a"
+            ]
+        ]
+    },
+    {
+        "id": "e2998f94abe8a2f6",
+        "type": "ui_group",
+        "name": "Data Drivers",
+        "tab": "68b15b367e4b47ac",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4e51f179f34f89ef",
+        "type": "ui_group",
+        "name": "Add a new Driver",
+        "tab": "68b15b367e4b47ac",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "998518b81f872043",
+        "type": "ui_group",
+        "name": "Remove Driver",
+        "tab": "68b15b367e4b47ac",
+        "order": 4,
+        "disp": true,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "31e0e13b0b941009",
+        "type": "ui_group",
+        "name": "Update Data Driver",
+        "tab": "68b15b367e4b47ac",
+        "order": 3,
+        "disp": true,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "347578936cd017ea",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3308",
+        "db": "yphe_login",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "68b15b367e4b47ac",
+        "type": "ui_tab",
+        "name": "Drivers",
+        "icon": "people",
+        "order": 8,
+        "disabled": false,
+        "hidden": false
+    }
+]

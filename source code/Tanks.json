@@ -1,0 +1,941 @@
+[
+    {
+        "id": "8fa68b7318baaa25",
+        "type": "tab",
+        "label": "Tanks",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ecde79adf59f0da1",
+        "type": "ui_artlessgauge",
+        "z": "8fa68b7318baaa25",
+        "group": "327d717182ef2fd3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "icon": "",
+        "label": "Main Tank",
+        "unit": "%",
+        "layout": "linear",
+        "decimals": "2",
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": true,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "7",
+        "bgcolorFromTheme": false,
+        "diffCenter": "",
+        "x": 640,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1c327442e24ef7b0",
+        "type": "ui_artlessgauge",
+        "z": "8fa68b7318baaa25",
+        "group": "327d717182ef2fd3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "icon": "",
+        "label": "Pit Tank",
+        "unit": "%",
+        "layout": "linear",
+        "decimals": "2",
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": true,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "7",
+        "bgcolorFromTheme": false,
+        "diffCenter": "",
+        "x": 640,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0b22059fd040e8a6",
+        "type": "ui_artlessgauge",
+        "z": "8fa68b7318baaa25",
+        "group": "327d717182ef2fd3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "icon": "",
+        "label": "Ramp Tank",
+        "unit": "%",
+        "layout": "linear",
+        "decimals": "2",
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": true,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "7",
+        "bgcolorFromTheme": false,
+        "diffCenter": "",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e1662571a68be134",
+        "type": "ui_artlessgauge",
+        "z": "8fa68b7318baaa25",
+        "group": "327d717182ef2fd3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "icon": "",
+        "label": "Road Diesel",
+        "unit": "%",
+        "layout": "linear",
+        "decimals": "2",
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": true,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "7",
+        "bgcolorFromTheme": false,
+        "diffCenter": "",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d4aebb92377995a6",
+        "type": "ui_artlessgauge",
+        "z": "8fa68b7318baaa25",
+        "group": "327d717182ef2fd3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "icon": "",
+        "label": "Small Mobile Tank",
+        "unit": "%",
+        "layout": "linear",
+        "decimals": "2",
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": true,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "7",
+        "bgcolorFromTheme": false,
+        "diffCenter": "",
+        "x": 640,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "601bed41e7a65d6c",
+        "type": "ui_dropdown",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "label": "Tank",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "03eceec92549b177",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Main Tank",
+                "value": "main_tank",
+                "type": "str"
+            },
+            {
+                "label": "Pit Tank",
+                "value": "pit_tank",
+                "type": "str"
+            },
+            {
+                "label": "Ramp Tank",
+                "value": "ramp_tank",
+                "type": "str"
+            },
+            {
+                "label": "Road Diesel",
+                "value": "road_diesel",
+                "type": "str"
+            },
+            {
+                "label": "Small Mobile Tank",
+                "value": "small_mobile_tank",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "d775f4664333b6d4"
+            ]
+        ]
+    },
+    {
+        "id": "d775f4664333b6d4",
+        "type": "debug",
+        "z": "8fa68b7318baaa25",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8fa08d6244ee9c8e",
+        "type": "ui_dropdown",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "label": "Volume Unit",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "03eceec92549b177",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Litres",
+                "value": "litres",
+                "type": "str"
+            },
+            {
+                "label": "US Gallons",
+                "value": "us_gallons",
+                "type": "str"
+            },
+            {
+                "label": "lmp Gallons",
+                "value": "lmp_gallons",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 210,
+        "y": 420,
+        "wires": [
+            [
+                "d775f4664333b6d4"
+            ]
+        ]
+    },
+    {
+        "id": "e4b08b7404d9a1ab",
+        "type": "ui_ui-button",
+        "z": "8fa68b7318baaa25",
+        "action": "click",
+        "actionType": "str",
+        "name": "",
+        "group": "03eceec92549b177",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "x": 70,
+        "y": 380,
+        "wires": [
+            [
+                "8fa08d6244ee9c8e",
+                "58acbd504a9d8ab5",
+                "601bed41e7a65d6c"
+            ]
+        ]
+    },
+    {
+        "id": "58acbd504a9d8ab5",
+        "type": "ui_text-input",
+        "z": "8fa68b7318baaa25",
+        "action": "set",
+        "actionType": "str",
+        "write": "payload",
+        "writeType": "msg",
+        "name": "",
+        "label": "Volume",
+        "tooltip": "",
+        "group": "03eceec92549b177",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "change": true,
+        "delay": 300,
+        "topic": "volume",
+        "x": 220,
+        "y": 340,
+        "wires": [
+            [
+                "d775f4664333b6d4"
+            ]
+        ]
+    },
+    {
+        "id": "57e0f48f.2095cc",
+        "type": "inject",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 105,
+        "y": 460,
+        "wires": [
+            [
+                "7bc2234f.756184"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7bc2234f.756184",
+        "type": "change",
+        "z": "8fa68b7318baaa25",
+        "name": "Options",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "['Main Tank','Pit Tank','Ramp Tank','Road Diesel','Small Road Tank']",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 460,
+        "wires": [
+            [
+                "3bcb1d68.454592"
+            ]
+        ]
+    },
+    {
+        "id": "3bcb1d68.454592",
+        "type": "ui_dropdown",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "327d717182ef2fd3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 220,
+        "y": 540,
+        "wires": [
+            [
+                "fe9c6f12.2e1cc"
+            ]
+        ]
+    },
+    {
+        "id": "fe9c6f12.2e1cc",
+        "type": "switch",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Main Tank",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Pit Tank",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Ramp Tank",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Road Diesel",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Small Road Tank",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "f49503bd.72a76",
+                "0e025c84649f0e25"
+            ],
+            [
+                "b7303574.28e768",
+                "0e025c84649f0e25"
+            ],
+            [
+                "f8d4e225.5471f",
+                "0e025c84649f0e25"
+            ],
+            [
+                "0e025c84649f0e25"
+            ],
+            [
+                "0e025c84649f0e25"
+            ]
+        ]
+    },
+    {
+        "id": "f49503bd.72a76",
+        "type": "change",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{'title':'apples'},{'title':'bananas'},{'title':'oranges'}]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "118429a4.b9a3b6"
+            ]
+        ]
+    },
+    {
+        "id": "b7303574.28e768",
+        "type": "change",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{'title':'maize'},{'title':'beans'},{'title':'squash'}]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 440,
+        "wires": [
+            [
+                "118429a4.b9a3b6"
+            ]
+        ]
+    },
+    {
+        "id": "f8d4e225.5471f",
+        "type": "change",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{'title':'beer'},{'title':'wine'},{'title':'water'}]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 480,
+        "wires": [
+            [
+                "118429a4.b9a3b6"
+            ]
+        ]
+    },
+    {
+        "id": "118429a4.b9a3b6",
+        "type": "ui_list",
+        "z": "8fa68b7318baaa25",
+        "group": "327d717182ef2fd3",
+        "name": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "lineType": "three",
+        "actionType": "check",
+        "allowHTML": false,
+        "outputs": 1,
+        "topic": "",
+        "x": 790,
+        "y": 440,
+        "wires": [
+            [
+                "bb4e2eca.92bcd"
+            ]
+        ]
+    },
+    {
+        "id": "bb4e2eca.92bcd",
+        "type": "debug",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 950,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "0e025c84649f0e25",
+        "type": "debug",
+        "z": "8fa68b7318baaa25",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "54257912c3119931",
+        "type": "inject",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "240",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "772e4ae5a995b16e"
+            ]
+        ]
+    },
+    {
+        "id": "772e4ae5a995b16e",
+        "type": "Number",
+        "z": "8fa68b7318baaa25",
+        "name": "Random Number",
+        "minimum": "0",
+        "maximum": "100",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "ecde79adf59f0da1"
+            ]
+        ]
+    },
+    {
+        "id": "069e95bb2fa64d8d",
+        "type": "Number",
+        "z": "8fa68b7318baaa25",
+        "name": "Random Number",
+        "minimum": "0",
+        "maximum": "100",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "1c327442e24ef7b0"
+            ]
+        ]
+    },
+    {
+        "id": "e02f09fefd59352e",
+        "type": "Number",
+        "z": "8fa68b7318baaa25",
+        "name": "Random Number",
+        "minimum": "0",
+        "maximum": "100",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "0b22059fd040e8a6"
+            ]
+        ]
+    },
+    {
+        "id": "4862cd02b2b8e9eb",
+        "type": "Number",
+        "z": "8fa68b7318baaa25",
+        "name": "Random Number",
+        "minimum": "0",
+        "maximum": "100",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "e1662571a68be134"
+            ]
+        ]
+    },
+    {
+        "id": "26fec1cb80df66fd",
+        "type": "Number",
+        "z": "8fa68b7318baaa25",
+        "name": "Random Number",
+        "minimum": "0",
+        "maximum": "100",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "d4aebb92377995a6"
+            ]
+        ]
+    },
+    {
+        "id": "315ae1b6082a2d13",
+        "type": "inject",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "069e95bb2fa64d8d"
+            ]
+        ]
+    },
+    {
+        "id": "77f2b224d800686d",
+        "type": "inject",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "e02f09fefd59352e"
+            ]
+        ]
+    },
+    {
+        "id": "7a1ea7df5f5176c9",
+        "type": "inject",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "4862cd02b2b8e9eb"
+            ]
+        ]
+    },
+    {
+        "id": "e26eaf31493762a5",
+        "type": "inject",
+        "z": "8fa68b7318baaa25",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "26fec1cb80df66fd"
+            ]
+        ]
+    },
+    {
+        "id": "327d717182ef2fd3",
+        "type": "ui_group",
+        "name": "Tanks",
+        "tab": "a8fbe0627cf8b9f4",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "03eceec92549b177",
+        "type": "ui_group",
+        "name": "Add Manual Dip",
+        "tab": "a8fbe0627cf8b9f4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a8fbe0627cf8b9f4",
+        "type": "ui_tab",
+        "name": "Tanks",
+        "icon": "poll",
+        "order": 11,
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,0 +1,1356 @@
+[
+    {
+        "id": "8708c8565a0e32f0",
+        "type": "tab",
+        "label": "Cleanliness YFJ-4",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8ce78fb010af5a50",
+        "type": "serial in",
+        "z": "8708c8565a0e32f0",
+        "name": "YFJ-4",
+        "serial": "9899433f18bbb4cc",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "4c3a662e.52be7",
+                "2ad5af420d80c0b1"
+            ]
+        ]
+    },
+    {
+        "id": "4c3a662e.52be7",
+        "type": "function",
+        "z": "8708c8565a0e32f0",
+        "name": "split data",
+        "func": "const string = msg.payload;\nconst bits = [[\"count_4um\", 25, 33], [\"count_6um\", 34, 42], [\"count_14um\", 43, 51], \n    [\"code_4um\", 52, 54], [\"code_6um\", 54, 56], [\"code_14um\", 56, 58] ];\nmsg.payload = bits.reduce((acc, arr) => {\n    return Object.assign(acc, {[arr[0]]:string.slice(arr[1],arr[2])});\n},{});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "faf2efac7ecacc57",
+                "85991786eda14ea8",
+                "bbed4ea391d70447",
+                "e77a789110a9123d",
+                "d33914100069edae",
+                "f9a81bfbd2e5c153",
+                "cfcc1ed27b218f57",
+                "17c947ae2802d947",
+                "78228d2d74ae1a83",
+                "856355354a1d9286",
+                "d3ac638e90c69eb3"
+            ]
+        ]
+    },
+    {
+        "id": "e22c9ac25a688269",
+        "type": "inject",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "H32022-11- 2 14: 1:10 DAT   1152T     283T       2L1815 8 0 0 0 0V10.0A  0.00O   0.0",
+        "payloadType": "str",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "4c3a662e.52be7"
+            ]
+        ]
+    },
+    {
+        "id": "faf2efac7ecacc57",
+        "type": "ui_level",
+        "z": "8708c8565a0e32f0",
+        "group": "4fff376e61894f88",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "4μ",
+        "label": "4μm: ",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9b00",
+        "colorNormal": "#ff9b00",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "50000",
+        "segWarn": "",
+        "segHigh": "0",
+        "unit": "",
+        "layout": "sh",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": "2",
+        "colorschema": "rainbow",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": true,
+        "hideValue": false,
+        "tickmode": "segments",
+        "peakmode": false,
+        "property": "payload.count_4um",
+        "peaktime": 3000,
+        "x": 510,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "85991786eda14ea8",
+        "type": "ui_level",
+        "z": "8708c8565a0e32f0",
+        "group": "4fff376e61894f88",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "6μ",
+        "label": "6μm: ",
+        "colorHi": "#e60000",
+        "colorWarn": "#0f8cc8",
+        "colorNormal": "#0f8cc8",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "10000",
+        "segWarn": "",
+        "segHigh": "0",
+        "unit": "",
+        "layout": "sh",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": "2",
+        "colorschema": "rainbow",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": true,
+        "hideValue": false,
+        "tickmode": "segments",
+        "peakmode": false,
+        "property": "payload.count_6um",
+        "peaktime": 3000,
+        "x": 510,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "bbed4ea391d70447",
+        "type": "ui_level",
+        "z": "8708c8565a0e32f0",
+        "group": "4fff376e61894f88",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "14μ",
+        "label": "14μm: ",
+        "colorHi": "#e60000",
+        "colorWarn": "#058246",
+        "colorNormal": "#058246",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "5000",
+        "segWarn": "",
+        "segHigh": "0",
+        "unit": "",
+        "layout": "sh",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": "2",
+        "colorschema": "rainbow",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": true,
+        "hideValue": false,
+        "tickmode": "segments",
+        "peakmode": false,
+        "property": "payload.count_14um",
+        "peaktime": 3000,
+        "x": 510,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e77a789110a9123d",
+        "type": "ui_artlessgauge",
+        "z": "8708c8565a0e32f0",
+        "group": "d218fd6675f2543a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "4μ",
+        "icon": "fa-filter",
+        "label": "4μm",
+        "unit": "",
+        "layout": "linear",
+        "decimals": 0,
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload.code_4um",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#ff9b00",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 25,
+                "col": "#ff9b00",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "5",
+        "bgcolorFromTheme": false,
+        "diffCenter": "0",
+        "x": 510,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d33914100069edae",
+        "type": "ui_artlessgauge",
+        "z": "8708c8565a0e32f0",
+        "group": "d218fd6675f2543a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "6μ",
+        "icon": "fa-filter",
+        "label": "6μm",
+        "unit": "",
+        "layout": "linear",
+        "decimals": 0,
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload.code_6um",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#0f8cc8",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 25,
+                "col": "#0f8cc8",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "5",
+        "bgcolorFromTheme": false,
+        "diffCenter": "0",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f9a81bfbd2e5c153",
+        "type": "ui_artlessgauge",
+        "z": "8708c8565a0e32f0",
+        "group": "d218fd6675f2543a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "14μ",
+        "icon": "fa-filter",
+        "label": "14μm",
+        "unit": "",
+        "layout": "linear",
+        "decimals": 0,
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload.code_14um",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#058246",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 25,
+                "col": "#058246",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "5",
+        "bgcolorFromTheme": false,
+        "diffCenter": "0",
+        "x": 510,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8f3bd897763450aa",
+        "type": "comment",
+        "z": "8708c8565a0e32f0",
+        "name": "Before/After Particle Count",
+        "info": "",
+        "x": 570,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e8066f3db9cbf4cb",
+        "type": "comment",
+        "z": "8708c8565a0e32f0",
+        "name": "Before/After ISO Class",
+        "info": "",
+        "x": 560,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "cfcc1ed27b218f57",
+        "type": "function",
+        "z": "8708c8565a0e32f0",
+        "name": "before/after chart",
+        "func": "var msg1 = { payload: msg.payload.code_4um};\nmsg1.topic = '4μm';\nvar msg2 = { payload: msg.payload.code_6um};\nmsg2.topic = '6μm';\nvar msg3 = { payload: msg.payload.code_14um};\nmsg3.topic = '14μm';\n\nreturn [msg1,msg2,msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 600,
+        "wires": [
+            [
+                "68ae655ee0b58aa9"
+            ],
+            [
+                "68ae655ee0b58aa9"
+            ],
+            [
+                "68ae655ee0b58aa9"
+            ]
+        ]
+    },
+    {
+        "id": "0c72a8660a689ce0",
+        "type": "ui_slider",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "label": "Flowrate value:",
+        "tooltip": "LPM",
+        "group": "071c31c938b04b50",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": 1,
+        "className": "",
+        "x": 1060,
+        "y": 520,
+        "wires": [
+            [
+                "b34271a38f0b2553",
+                "ba23f02d2bdc765e"
+            ]
+        ]
+    },
+    {
+        "id": "ebaa415861ec2906",
+        "type": "ui_numeric",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "label": "Differential pressure value:",
+        "tooltip": "PSID",
+        "group": "071c31c938b04b50",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": 1,
+        "className": "",
+        "x": 1020,
+        "y": 440,
+        "wires": [
+            [
+                "b34271a38f0b2553",
+                "41a60d2fc950696f"
+            ]
+        ]
+    },
+    {
+        "id": "68ae655ee0b58aa9",
+        "type": "ui_chart",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "group": "6181bac1acaef96e",
+        "order": 1,
+        "width": 22,
+        "height": 7,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "25",
+        "removeOlder": 1,
+        "removeOlderPoints": "250",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff9b00",
+            "#0f8cc8",
+            "#058246",
+            "#be0505",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 790,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17c947ae2802d947",
+        "type": "debug",
+        "z": "8708c8565a0e32f0",
+        "name": "split msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "587690024a5eb87a",
+        "type": "comment",
+        "z": "8708c8565a0e32f0",
+        "name": "Manual input DPI and Flowrate value ",
+        "info": "",
+        "x": 1000,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b34271a38f0b2553",
+        "type": "debug",
+        "z": "8708c8565a0e32f0",
+        "name": "msg manual",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "78228d2d74ae1a83",
+        "type": "change",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "code_4um",
+                "pt": "flow",
+                "to": "payload.code_4um",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "code_6um",
+                "pt": "flow",
+                "to": "payload.code_6um",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "code_14um",
+                "pt": "flow",
+                "to": "payload.code_14um",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "count_4um",
+                "pt": "flow",
+                "to": "payload.count_4um",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "count_6um",
+                "pt": "flow",
+                "to": "payload.count_6um",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "count_14um",
+                "pt": "flow",
+                "to": "payload.count_14um",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41a60d2fc950696f",
+        "type": "change",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dpi",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba23f02d2bdc765e",
+        "type": "change",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowrate",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5032577abafa023",
+        "type": "mysql",
+        "z": "8708c8565a0e32f0",
+        "mydb": "",
+        "name": "",
+        "x": 1520,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "856355354a1d9286",
+        "type": "function",
+        "z": "8708c8565a0e32f0",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    test_date: flow.get(\"test_date\"),\n    code_4um: flow.get(\"code_4um\"),\n    code_6um: flow.get(\"code_6um\"),\n    code_14um: flow.get(\"code_14um\"),\n    count_4um: flow.get(\"count_4um\"),\n    count_6um: flow.get(\"count_6um\"),\n    count_14um: flow.get(\"count_14um\"),\n    flowrate: flow.get(\"flowrate\"),\n    dpi: flow.get(\"dpi\"),\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 660,
+        "wires": [
+            [
+                "f1c9add0de102e6a"
+            ]
+        ]
+    },
+    {
+        "id": "b73181df69a9b807",
+        "type": "function",
+        "z": "8708c8565a0e32f0",
+        "name": "before insert statement",
+        "func": "msg.topic = \"INSERT INTO before_ndfo644plf5 (test_date, code_4um, code_6um, code_14um, count_4um, count_6um, count_14um, flowrate, dpi) \" + \n    \"VALUES ('\" + msg.test_date + \"', '\" + msg.code_4um + \"', '\" + msg.code_6um + \"', '\" + msg.code_14um + \"', '\" + msg.count_4um + \"', '\" + msg.count_6um + \"', '\" + msg.count_14um + \"', '\" + msg.flowrate + \"', '\" + msg.dpi + \"');\"; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 680,
+        "wires": [
+            [
+                "a5032577abafa023"
+            ]
+        ]
+    },
+    {
+        "id": "3090c32d51b5c022",
+        "type": "function",
+        "z": "8708c8565a0e32f0",
+        "name": "after insert statement",
+        "func": "msg.topic = \"INSERT INTO after_ndfo644plf5 (test_date, code_4um, code_6um, code_14um, count_4um, count_6um, count_14um, flowrate, dpi) \" + \n    \"VALUES ('\" + msg.test_date + \"', '\" + msg.code_4um + \"', '\" + msg.code_6um + \"', '\" + msg.code_14um + \"', '\" + msg.count_4um + \"', '\" + msg.count_6um + \"', '\" + msg.count_14um + \"', '\" + msg.flowrate + \"', '\" + msg.dpi + \"');\"; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 640,
+        "wires": [
+            [
+                "a5032577abafa023"
+            ]
+        ]
+    },
+    {
+        "id": "dd0fecacff6dd9ec",
+        "type": "change",
+        "z": "8708c8565a0e32f0",
+        "name": "show before_ndfo644plf5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT * FROM before_ndfo644plf5 ORDER BY id DESC;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 800,
+        "wires": [
+            [
+                "21366f9da4b1b42a"
+            ]
+        ]
+    },
+    {
+        "id": "56fcac17c8bcfda4",
+        "type": "ui_table",
+        "z": "8708c8565a0e32f0",
+        "group": "60e999eee360aa93",
+        "name": "display after",
+        "order": 1,
+        "width": "22",
+        "height": "5",
+        "columns": [
+            {
+                "field": "test_date",
+                "title": "Date",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "test_time",
+                "title": "Time",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "count_4um",
+                "title": "Count 4um",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "count_6um",
+                "title": "Count 6um",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "count_14um",
+                "title": "Count 14um",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "code_4um",
+                "title": "Code 4um",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "code_6um",
+                "title": "Code 6um",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "code_14um",
+                "title": "Code 14um",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "flowrate",
+                "title": "Flowrate",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "dpi",
+                "title": "DPI",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1270,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "d725f2ec7238f7c3",
+        "type": "change",
+        "z": "8708c8565a0e32f0",
+        "name": "show after_ndfo644plf5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT * FROM after_ndfo644plf5 ORDER BY id DESC;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 840,
+        "wires": [
+            [
+                "c4a3f764a21c0313"
+            ]
+        ]
+    },
+    {
+        "id": "c939a346c7302f3b",
+        "type": "ui_table",
+        "z": "8708c8565a0e32f0",
+        "group": "9830552bfbc0a872",
+        "name": "display before",
+        "order": 1,
+        "width": "22",
+        "height": "5",
+        "columns": [
+            {
+                "field": "test_date",
+                "title": "Date",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "test_time",
+                "title": "Time",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "count_4um",
+                "title": "Count 4um",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "count_6um",
+                "title": "Count 6um",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "count_14um",
+                "title": "Count 14um",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "code_4um",
+                "title": "Code 4um",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "code_6um",
+                "title": "Code 6um",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "code_14um",
+                "title": "Code 14um",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "flowrate",
+                "title": "Flowrate",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "dpi",
+                "title": "DPI",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1280,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "21366f9da4b1b42a",
+        "type": "mysql",
+        "z": "8708c8565a0e32f0",
+        "mydb": "",
+        "name": "",
+        "x": 1080,
+        "y": 800,
+        "wires": [
+            [
+                "c939a346c7302f3b"
+            ]
+        ]
+    },
+    {
+        "id": "f3e1e29a0d3c449c",
+        "type": "comment",
+        "z": "8708c8565a0e32f0",
+        "name": "Change Before/After Databases",
+        "info": "",
+        "x": 1270,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f1c9add0de102e6a",
+        "type": "ui_switch",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "label": "Before <- / -> After",
+        "tooltip": "",
+        "group": "071c31c938b04b50",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 830,
+        "y": 660,
+        "wires": [
+            [
+                "e06f4db01efe6e4d"
+            ]
+        ]
+    },
+    {
+        "id": "e06f4db01efe6e4d",
+        "type": "switch",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1070,
+        "y": 660,
+        "wires": [
+            [
+                "3090c32d51b5c022"
+            ],
+            [
+                "b73181df69a9b807"
+            ]
+        ]
+    },
+    {
+        "id": "d3ac638e90c69eb3",
+        "type": "delay",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 820,
+        "wires": [
+            [
+                "dd0fecacff6dd9ec",
+                "d725f2ec7238f7c3"
+            ]
+        ]
+    },
+    {
+        "id": "c4a3f764a21c0313",
+        "type": "mysql",
+        "z": "8708c8565a0e32f0",
+        "mydb": "",
+        "name": "",
+        "x": 1080,
+        "y": 840,
+        "wires": [
+            [
+                "56fcac17c8bcfda4"
+            ]
+        ]
+    },
+    {
+        "id": "cb5c6981184a0b5a",
+        "type": "change",
+        "z": "8708c8565a0e32f0",
+        "name": "date before_ndfo644plf5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT test_date FROM before_ndfo644plf5 ORDER BY id DESC;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 940,
+        "wires": [
+            [
+                "4fadb2cd7f95f516"
+            ]
+        ]
+    },
+    {
+        "id": "a35a8e0312d03a0e",
+        "type": "debug",
+        "z": "8708c8565a0e32f0",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "4fadb2cd7f95f516",
+        "type": "mysql",
+        "z": "8708c8565a0e32f0",
+        "mydb": "",
+        "name": "",
+        "x": 1080,
+        "y": 940,
+        "wires": [
+            [
+                "a35a8e0312d03a0e"
+            ]
+        ]
+    },
+    {
+        "id": "57fbeae73a4abcda",
+        "type": "inject",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "2ad5af420d80c0b1"
+            ]
+        ]
+    },
+    {
+        "id": "2ad5af420d80c0b1",
+        "type": "moment",
+        "z": "8708c8565a0e32f0",
+        "name": "Date",
+        "topic": "",
+        "input": "payload",
+        "inputType": "msg",
+        "inTz": "Asia/Bangkok",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "YYYY-MM-DD",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Asia/Bangkok",
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "ff7db878134bfe8f"
+            ]
+        ]
+    },
+    {
+        "id": "ff7db878134bfe8f",
+        "type": "change",
+        "z": "8708c8565a0e32f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "test_date",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9899433f18bbb4cc",
+        "type": "serial-port",
+        "serialport": "COM2",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\r",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "4fff376e61894f88",
+        "type": "ui_group",
+        "name": "Before/After Particle Count",
+        "tab": "1bc237d529348ace",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d218fd6675f2543a",
+        "type": "ui_group",
+        "name": "Before/After ISO Code",
+        "tab": "1bc237d529348ace",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "071c31c938b04b50",
+        "type": "ui_group",
+        "name": "Manual Input Value",
+        "tab": "1bc237d529348ace",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6181bac1acaef96e",
+        "type": "ui_group",
+        "name": "Before/After ISO Class [Log Chart]",
+        "tab": "1bc237d529348ace",
+        "order": 4,
+        "disp": true,
+        "width": 22,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "60e999eee360aa93",
+        "type": "ui_group",
+        "name": "Database After Filtration",
+        "tab": "359588f78886d0bd",
+        "order": 2,
+        "disp": true,
+        "width": "22",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9830552bfbc0a872",
+        "type": "ui_group",
+        "name": "Database Before Filtration",
+        "tab": "359588f78886d0bd",
+        "order": 1,
+        "disp": true,
+        "width": "22",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1bc237d529348ace",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "fa-tachometer",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "359588f78886d0bd",
+        "type": "ui_tab",
+        "name": "Before Filtration",
+        "icon": "fa-table",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]

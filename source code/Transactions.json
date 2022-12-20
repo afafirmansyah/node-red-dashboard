@@ -1,0 +1,494 @@
+[
+    {
+        "id": "976a58c241e6986b",
+        "type": "tab",
+        "label": "Transactions",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9b2cdee0804dc353",
+        "type": "link in",
+        "z": "976a58c241e6986b",
+        "name": "from save transactions",
+        "links": [
+            "a9b0efcf383a4487"
+        ],
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "c72aa0704a2c80ac",
+                "720d1967b337bd7c"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a18b23795538c520",
+        "type": "ui_table",
+        "z": "976a58c241e6986b",
+        "group": "45c2b0fada35658c",
+        "name": "display reports",
+        "order": 1,
+        "width": 20,
+        "height": 8,
+        "columns": [
+            {
+                "field": "trans_date",
+                "title": "Date",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "trans_time",
+                "title": "Time",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_id",
+                "title": "Driver ID",
+                "width": "9%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_name",
+                "title": "Driver Name",
+                "width": "12%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_desc",
+                "title": "License",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_id",
+                "title": "Vehicle ID",
+                "width": "9%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_desc",
+                "title": "Vehicle Desc",
+                "width": "16%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_name",
+                "title": "Make",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_number",
+                "title": "Registration",
+                "width": "13%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "trans_volume",
+                "title": "Volume",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 840,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c72aa0704a2c80ac",
+        "type": "mysql",
+        "z": "976a58c241e6986b",
+        "mydb": "",
+        "name": "reports table",
+        "x": 610,
+        "y": 240,
+        "wires": [
+            [
+                "a18b23795538c520"
+            ]
+        ]
+    },
+    {
+        "id": "585f29381923085c",
+        "type": "inject",
+        "z": "976a58c241e6986b",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM transactions WHERE trans_flag=0;",
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "039e78eb2bf55074"
+            ]
+        ]
+    },
+    {
+        "id": "039e78eb2bf55074",
+        "type": "mysql",
+        "z": "976a58c241e6986b",
+        "mydb": "",
+        "name": "",
+        "x": 830,
+        "y": 340,
+        "wires": [
+            [
+                "fea049f6a4b30832",
+                "23892295c4c87e88"
+            ]
+        ]
+    },
+    {
+        "id": "fea049f6a4b30832",
+        "type": "switch",
+        "z": "976a58c241e6986b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1010,
+        "y": 340,
+        "wires": [
+            [],
+            [
+                "dca4f6574ca6e84d",
+                "ec8567bda4dae5d1",
+                "41c452fa0d92ab01"
+            ]
+        ]
+    },
+    {
+        "id": "dca4f6574ca6e84d",
+        "type": "function",
+        "z": "976a58c241e6986b",
+        "name": "insert statement",
+        "func": "msg.topic = \"INSERT INTO transactions (trans_date, trans_time, trans_volume, driver_id, driver_desc, driver_name, vehicle_id, vehicle_desc, vehicle_name, vehicle_number, trans_flag) \" +\n    \"VALUES ('\" + msg.payload[0].trans_date + \"', '\" + msg.payload[0].trans_time + \"', '\" + msg.payload[0].trans_volume + \"', '\" + msg.payload[0].driver_id + \"', '\" + msg.payload[0].driver_desc + \"', '\" + msg.payload[0].driver_name + \"', '\" + msg.payload[0].vehicle_id + \"', '\" + msg.payload[0].vehicle_desc + \"', '\" + msg.payload[0].vehicle_name + \"', '\" + msg.payload[0].vehicle_number + \"', '1' );\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 340,
+        "wires": [
+            [
+                "92f0aa1be61f1d58"
+            ]
+        ]
+    },
+    {
+        "id": "92f0aa1be61f1d58",
+        "type": "mysql",
+        "z": "976a58c241e6986b",
+        "mydb": "347578936cd017ea",
+        "name": "",
+        "x": 1410,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cda2173918346337",
+        "type": "mysql",
+        "z": "976a58c241e6986b",
+        "mydb": "",
+        "name": "",
+        "x": 1470,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec8567bda4dae5d1",
+        "type": "function",
+        "z": "976a58c241e6986b",
+        "name": "set statement",
+        "func": "msg.topic = \"UPDATE transactions SET trans_flag = 1 WHERE id = '\" + msg.payload[0].id + \"'\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 400,
+        "wires": [
+            [
+                "23f977f587e07aa7"
+            ]
+        ]
+    },
+    {
+        "id": "23f977f587e07aa7",
+        "type": "delay",
+        "z": "976a58c241e6986b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1355,
+        "y": 400,
+        "wires": [
+            [
+                "cda2173918346337"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9fbe4b8dce9baff0",
+        "type": "change",
+        "z": "976a58c241e6986b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "SELECT * FROM transactions WHERE trans_flag=0;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1260,
+        "y": 440,
+        "wires": [
+            [
+                "1176b6b27134218c"
+            ]
+        ]
+    },
+    {
+        "id": "41c452fa0d92ab01",
+        "type": "delay",
+        "z": "976a58c241e6986b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1135,
+        "y": 440,
+        "wires": [
+            [
+                "9fbe4b8dce9baff0"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "720d1967b337bd7c",
+        "type": "change",
+        "z": "976a58c241e6986b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "SELECT * FROM transactions WHERE trans_flag=0;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 300,
+        "wires": [
+            [
+                "039e78eb2bf55074"
+            ]
+        ]
+    },
+    {
+        "id": "75e86c2c96d7441a",
+        "type": "inject",
+        "z": "976a58c241e6986b",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM transactions;",
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "c72aa0704a2c80ac"
+            ]
+        ]
+    },
+    {
+        "id": "1176b6b27134218c",
+        "type": "link out",
+        "z": "976a58c241e6986b",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "544defeda2705e19"
+        ],
+        "x": 1385,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "544defeda2705e19",
+        "type": "link in",
+        "z": "976a58c241e6986b",
+        "name": "link in 1",
+        "links": [
+            "1176b6b27134218c"
+        ],
+        "x": 685,
+        "y": 380,
+        "wires": [
+            [
+                "039e78eb2bf55074"
+            ]
+        ]
+    },
+    {
+        "id": "23892295c4c87e88",
+        "type": "debug",
+        "z": "976a58c241e6986b",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "45c2b0fada35658c",
+        "type": "ui_group",
+        "name": "Transactions",
+        "tab": "e11aa43fd19026d6",
+        "order": 1,
+        "disp": true,
+        "width": 20,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "347578936cd017ea",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3308",
+        "db": "yphe_login",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "e11aa43fd19026d6",
+        "type": "ui_tab",
+        "name": "Transactions",
+        "icon": "assignment_turned_in",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    }
+]

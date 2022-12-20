@@ -1,0 +1,2217 @@
+[
+    {
+        "id": "7d8f3f86659c2746",
+        "type": "tab",
+        "label": "Vehicle",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f880e0d5827a0094",
+        "type": "ui_table",
+        "z": "7d8f3f86659c2746",
+        "group": "86ee9c0974c2067f",
+        "name": "display vehicles",
+        "order": 4,
+        "width": 12,
+        "height": 7,
+        "columns": [
+            {
+                "field": "vehicle_id",
+                "title": "Key",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_desc",
+                "title": "Description",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_name",
+                "title": "Make",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_number",
+                "title": "Registration",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 2160,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "2ba4a73f96383bb3",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "",
+        "name": "vehicles table",
+        "x": 1900,
+        "y": 660,
+        "wires": [
+            [
+                "f880e0d5827a0094"
+            ]
+        ]
+    },
+    {
+        "id": "b9b7a35d3261cd0f",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "show data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT * FROM vehicles;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1650,
+        "y": 660,
+        "wires": [
+            [
+                "2ba4a73f96383bb3"
+            ]
+        ]
+    },
+    {
+        "id": "1c65e81835ab4219",
+        "type": "delay",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "210",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1430,
+        "y": 660,
+        "wires": [
+            [
+                "b9b7a35d3261cd0f",
+                "4185281c505752d5"
+            ]
+        ]
+    },
+    {
+        "id": "a48abdc090102b6b",
+        "type": "catch",
+        "z": "7d8f3f86659c2746",
+        "name": "catch",
+        "scope": null,
+        "uncaught": true,
+        "x": 1410,
+        "y": 840,
+        "wires": [
+            [
+                "4b94a6f5df7a755f",
+                "9f426ecf7bee56fa"
+            ]
+        ]
+    },
+    {
+        "id": "4b94a6f5df7a755f",
+        "type": "debug",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "error",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "deccdfd956206d75",
+        "type": "ui_toast",
+        "z": "7d8f3f86659c2746",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error: Contact administrator",
+        "name": "",
+        "x": 1890,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f426ecf7bee56fa",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "your key has been registered!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1660,
+        "y": 840,
+        "wires": [
+            [
+                "deccdfd956206d75"
+            ]
+        ]
+    },
+    {
+        "id": "4e6e68ed2bd4ec7a",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "update statement",
+        "func": "msg.topic = \"UPDATE vehicles SET vehicle_desc = '\" + msg.new_vehicle_desc + \"', vehicle_name = '\" + msg.new_vehicle_name + \"', vehicle_number = '\" + msg.new_vehicle_number + \"' WHERE vehicle_id = '\" + msg.new_vehicle_id + \"'\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 760,
+        "wires": [
+            [
+                "2ef88f37a2f2ced6"
+            ]
+        ]
+    },
+    {
+        "id": "4d26dd39dfd30d94",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "",
+        "name": "drivers table",
+        "x": 1430,
+        "y": 280,
+        "wires": [
+            [
+                "442451c458c705bd"
+            ]
+        ]
+    },
+    {
+        "id": "442451c458c705bd",
+        "type": "switch",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1630,
+        "y": 280,
+        "wires": [
+            [
+                "e77b8ba6b0f1cc72"
+            ]
+        ]
+    },
+    {
+        "id": "edece481c3c70529",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "check drivers",
+        "func": "msg.topic = \"SELECT * FROM drivers WHERE driver_id='\" + msg.payload + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 280,
+        "wires": [
+            [
+                "4d26dd39dfd30d94"
+            ]
+        ]
+    },
+    {
+        "id": "d8eb89b954e16818",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "vehicle_id",
+        "label": "Key *",
+        "tooltip": "",
+        "group": "59a3105b21a4eb5e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "edece481c3c70529",
+                "2e531772448aa835",
+                "bb5b3d8b09049ec3"
+            ]
+        ]
+    },
+    {
+        "id": "5e9b466720e681a0",
+        "type": "ui_toast",
+        "z": "7d8f3f86659c2746",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error: Duplicate entry for key",
+        "name": "",
+        "x": 2150,
+        "y": 240,
+        "wires": [
+            [
+                "fcbad1153901aece"
+            ]
+        ]
+    },
+    {
+        "id": "18582958553ec12c",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "clear data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 360,
+        "wires": [
+            [
+                "d8eb89b954e16818",
+                "af5d7608f8687bf2",
+                "e43a2aea2a7903a1",
+                "487e20bef1e51c9a",
+                "6484659f39d218c2"
+            ]
+        ]
+    },
+    {
+        "id": "2e531772448aa835",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "check vehicles",
+        "func": "msg.topic = \"SELECT * FROM vehicles WHERE vehicle_id='\" + msg.payload + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 220,
+        "wires": [
+            [
+                "1cc52f523578483e"
+            ]
+        ]
+    },
+    {
+        "id": "1cc52f523578483e",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "",
+        "name": "vehicle table",
+        "x": 1430,
+        "y": 220,
+        "wires": [
+            [
+                "c347fd2c64cff32d"
+            ]
+        ]
+    },
+    {
+        "id": "c347fd2c64cff32d",
+        "type": "switch",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1630,
+        "y": 220,
+        "wires": [
+            [
+                "6d69684c60f696eb"
+            ]
+        ]
+    },
+    {
+        "id": "6d69684c60f696eb",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "send failed message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "your key has been registered on vehicle!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1920,
+        "y": 220,
+        "wires": [
+            [
+                "5e9b466720e681a0"
+            ]
+        ]
+    },
+    {
+        "id": "e77b8ba6b0f1cc72",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "send failed message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "your key has been registered on driver!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1920,
+        "y": 280,
+        "wires": [
+            [
+                "5e9b466720e681a0"
+            ]
+        ]
+    },
+    {
+        "id": "bb5b3d8b09049ec3",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_id",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 320,
+        "wires": [
+            [
+                "fcef26cd24394731"
+            ]
+        ]
+    },
+    {
+        "id": "af5d7608f8687bf2",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "vehicle_name",
+        "label": "Make",
+        "tooltip": "",
+        "group": "59a3105b21a4eb5e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 880,
+        "y": 400,
+        "wires": [
+            [
+                "4a08c00473f6e751"
+            ]
+        ]
+    },
+    {
+        "id": "e43a2aea2a7903a1",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "vehicle_desc",
+        "label": "Description",
+        "tooltip": "",
+        "group": "59a3105b21a4eb5e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 870,
+        "y": 360,
+        "wires": [
+            [
+                "8b57442745716f07"
+            ]
+        ]
+    },
+    {
+        "id": "4a08c00473f6e751",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_name",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b57442745716f07",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_desc",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fcbad1153901aece",
+        "type": "link out",
+        "z": "7d8f3f86659c2746",
+        "name": "to clear",
+        "mode": "link",
+        "links": [
+            "d237f996a072ee5b",
+            "8c774f1bb766f321"
+        ],
+        "x": 2340,
+        "y": 240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "8c774f1bb766f321",
+        "type": "link in",
+        "z": "7d8f3f86659c2746",
+        "name": "from clear",
+        "links": [
+            "4185281c505752d5",
+            "fcbad1153901aece"
+        ],
+        "x": 460,
+        "y": 320,
+        "wires": [
+            [
+                "18582958553ec12c"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "01d76b690147715d",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    vehicle_id   : flow.get(\"vehicle_id\"),\n    vehicle_desc : flow.get(\"vehicle_desc\"),\n    vehicle_name : flow.get(\"vehicle_name\"),\n    vehicle_number: flow.get(\"vehicle_number\"),\n}\n//msg.payload=\"work order number \" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 660,
+        "wires": [
+            [
+                "b67f07f4a44aca63"
+            ]
+        ]
+    },
+    {
+        "id": "2ef88f37a2f2ced6",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "",
+        "name": "vehicles table",
+        "x": 1140,
+        "y": 660,
+        "wires": [
+            [
+                "1c65e81835ab4219"
+            ]
+        ]
+    },
+    {
+        "id": "b67f07f4a44aca63",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "insert statement",
+        "func": "msg.topic = \"INSERT INTO vehicles (vehicle_id, vehicle_desc, vehicle_name, vehicle_number) \" + \n    \"VALUES ('\" + msg.vehicle_id + \"', '\" + msg.vehicle_desc + \"', '\" + msg.vehicle_name + \"', '\" + msg.vehicle_number +\"');\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 660,
+        "wires": [
+            [
+                "2ef88f37a2f2ced6"
+            ]
+        ]
+    },
+    {
+        "id": "4185281c505752d5",
+        "type": "link out",
+        "z": "7d8f3f86659c2746",
+        "name": "to clear",
+        "mode": "link",
+        "links": [
+            "d237f996a072ee5b",
+            "8c774f1bb766f321"
+        ],
+        "x": 1640,
+        "y": 700,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "60ef3ae83e8546a7",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    delete_vehicle   : flow.get(\"delete_vehicle\"),\n}\n//msg.payload=\"work order number \" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 720,
+        "wires": [
+            [
+                "5f737f0e73150f4e"
+            ]
+        ]
+    },
+    {
+        "id": "487e20bef1e51c9a",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "delete_vehicle",
+        "label": "Key *",
+        "tooltip": "",
+        "group": "f1f6c7ea23073d13",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "aa8b172564fbdc57",
+                "c16a4bddf611f403"
+            ]
+        ]
+    },
+    {
+        "id": "aa8b172564fbdc57",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delete_vehicle",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f737f0e73150f4e",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "delete statement",
+        "func": "msg.topic = \"DELETE FROM vehicles WHERE vehicle_id='\" + msg.delete_vehicle + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 720,
+        "wires": [
+            [
+                "2ef88f37a2f2ced6"
+            ]
+        ]
+    },
+    {
+        "id": "ff0b1c13e0cce4f0",
+        "type": "ui_template",
+        "z": "7d8f3f86659c2746",
+        "group": "f1f6c7ea23073d13",
+        "name": "Delete",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Delete'})\"> \n    Delete<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 450,
+        "y": 720,
+        "wires": [
+            [
+                "60ef3ae83e8546a7"
+            ]
+        ]
+    },
+    {
+        "id": "11f539b772554890",
+        "type": "ui_template",
+        "z": "7d8f3f86659c2746",
+        "group": "59a3105b21a4eb5e",
+        "name": "Add",
+        "order": 5,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Add'})\"> \n    Add<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 450,
+        "y": 660,
+        "wires": [
+            [
+                "01d76b690147715d",
+                "012596235d9dcc96"
+            ]
+        ]
+    },
+    {
+        "id": "9f5a2d3b4db757f6",
+        "type": "ui_template",
+        "z": "7d8f3f86659c2746",
+        "group": "59a3105b21a4eb5e",
+        "name": "Cancel",
+        "order": 6,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Cancel'})\"> \n    Cancel<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "18582958553ec12c"
+            ]
+        ]
+    },
+    {
+        "id": "fcef26cd24394731",
+        "type": "switch",
+        "z": "7d8f3f86659c2746",
+        "name": "is text empty?",
+        "property": "vehicle_id",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1440,
+        "y": 340,
+        "wires": [
+            [
+                "897959924aeb8d1c"
+            ],
+            [
+                "342e5b449a6b36cb"
+            ]
+        ]
+    },
+    {
+        "id": "897959924aeb8d1c",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1650,
+        "y": 340,
+        "wires": [
+            [
+                "b2a6cb6aa74a0210"
+            ]
+        ]
+    },
+    {
+        "id": "342e5b449a6b36cb",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1650,
+        "y": 380,
+        "wires": [
+            [
+                "b2a6cb6aa74a0210"
+            ]
+        ]
+    },
+    {
+        "id": "b2a6cb6aa74a0210",
+        "type": "link out",
+        "z": "7d8f3f86659c2746",
+        "name": "to add",
+        "mode": "link",
+        "links": [
+            "5810e01969fd77ea"
+        ],
+        "x": 1870,
+        "y": 360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5810e01969fd77ea",
+        "type": "link in",
+        "z": "7d8f3f86659c2746",
+        "name": "from add",
+        "links": [
+            "b2a6cb6aa74a0210"
+        ],
+        "x": 280,
+        "y": 660,
+        "wires": [
+            [
+                "11f539b772554890"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "7e6912cefa32b9a1",
+        "type": "ui_template",
+        "z": "7d8f3f86659c2746",
+        "group": "86ee9c0974c2067f",
+        "name": "Refresh",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: ''})\"> \n    Refresh <i class=\"fa fa-refresh\" aria-hidden=\"true\"></i><br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1120,
+        "y": 720,
+        "wires": [
+            [
+                "1c65e81835ab4219",
+                "26df2ea191bd9f89"
+            ]
+        ]
+    },
+    {
+        "id": "3416dcb4d936a9b4",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "search statement",
+        "func": "msg.topic = \"SELECT * FROM vehicles WHERE vehicle_id LIKE '%\" + msg.search_data + \"%' OR vehicle_desc LIKE '%\" + msg.search_data + \"%' OR vehicle_name LIKE '%\" + msg.search_data + \"%' OR vehicle_number LIKE '%\" + msg.search_data + \"%';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 580,
+        "wires": [
+            [
+                "2ba4a73f96383bb3"
+            ]
+        ]
+    },
+    {
+        "id": "9a9a09ec705a44ed",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "search_data",
+        "label": "Type to search ..",
+        "tooltip": "",
+        "group": "86ee9c0974c2067f",
+        "order": 2,
+        "width": 9,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 870,
+        "y": 620,
+        "wires": [
+            [
+                "6278eec34c5aebce"
+            ]
+        ]
+    },
+    {
+        "id": "6278eec34c5aebce",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "search_data",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 620,
+        "wires": [
+            [
+                "ebaa8e8682fa61b3",
+                "f6daa0c20c2dbcfe"
+            ]
+        ]
+    },
+    {
+        "id": "f6daa0c20c2dbcfe",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    search_data   : flow.get(\"search_data\"),\n}\n//msg.payload=\"work order number \" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 580,
+        "wires": [
+            [
+                "3416dcb4d936a9b4"
+            ]
+        ]
+    },
+    {
+        "id": "ebaa8e8682fa61b3",
+        "type": "switch",
+        "z": "7d8f3f86659c2746",
+        "name": "is text empty?",
+        "property": "driver_id",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1440,
+        "y": 620,
+        "wires": [
+            [
+                "b9b7a35d3261cd0f"
+            ]
+        ]
+    },
+    {
+        "id": "9763dbceba661af2",
+        "type": "ui_template",
+        "z": "7d8f3f86659c2746",
+        "group": "86ee9c0974c2067f",
+        "name": "icon",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "format": "\n<md-button style=\"background-color:#007CBE\"> \n    <i class=\"fa fa-search\" aria-hidden=\"true\"></i><br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 450,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15ef3f5e70fd4f3e",
+        "type": "link in",
+        "z": "7d8f3f86659c2746",
+        "name": "from search",
+        "links": [
+            "9e134196401a0cfb"
+        ],
+        "x": 650,
+        "y": 620,
+        "wires": [
+            [
+                "9a9a09ec705a44ed"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "26df2ea191bd9f89",
+        "type": "delay",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "210",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1430,
+        "y": 740,
+        "wires": [
+            [
+                "9e134196401a0cfb"
+            ]
+        ]
+    },
+    {
+        "id": "9e134196401a0cfb",
+        "type": "link out",
+        "z": "7d8f3f86659c2746",
+        "name": "to search",
+        "mode": "link",
+        "links": [
+            "15ef3f5e70fd4f3e"
+        ],
+        "x": 1640,
+        "y": 740,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ec154c27d4399581",
+        "type": "ui_template",
+        "z": "7d8f3f86659c2746",
+        "group": "452582615a482b0f",
+        "name": "Update",
+        "order": 5,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Update'})\"> \n    Update<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 460,
+        "y": 760,
+        "wires": [
+            [
+                "b261a558c268d895"
+            ]
+        ]
+    },
+    {
+        "id": "b261a558c268d895",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    new_vehicle_id: flow.get(\"new_vehicle_id\"),\n    new_vehicle_desc: flow.get(\"new_vehicle_desc\"),\n    new_vehicle_name: flow.get(\"new_vehicle_name\"),\n    new_vehicle_number: flow.get(\"new_vehicle_number\"),\n}\n//msg.payload=\"work order number \" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 760,
+        "wires": [
+            [
+                "4e6e68ed2bd4ec7a"
+            ]
+        ]
+    },
+    {
+        "id": "c1b4c2c1d97d8e7e",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "new_vehicle_id",
+        "label": "Key *",
+        "tooltip": "",
+        "group": "452582615a482b0f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 880,
+        "y": 820,
+        "wires": [
+            [
+                "2252011fa663382e",
+                "0e45e0da9c344b49"
+            ]
+        ]
+    },
+    {
+        "id": "05b10af949cb7818",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "new_vehicle_desc",
+        "label": "Description",
+        "tooltip": "",
+        "group": "452582615a482b0f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 890,
+        "y": 860,
+        "wires": [
+            [
+                "3b32746ae5e6770d"
+            ]
+        ]
+    },
+    {
+        "id": "aa0e045595fdedf7",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "new_vehicle_name",
+        "label": "Make",
+        "tooltip": "",
+        "group": "452582615a482b0f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 890,
+        "y": 900,
+        "wires": [
+            [
+                "a9fc537b679fd758"
+            ]
+        ]
+    },
+    {
+        "id": "2252011fa663382e",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "new_vehicle_id",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b32746ae5e6770d",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "new_vehicle_desc",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9fc537b679fd758",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "new_vehicle_name",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f2fa1bbbfed734d",
+        "type": "switch",
+        "z": "7d8f3f86659c2746",
+        "name": "is text empty?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1660,
+        "y": 780,
+        "wires": [
+            [
+                "bfc8c8e82c8683d2"
+            ],
+            [
+                "db8a800538f35926"
+            ]
+        ]
+    },
+    {
+        "id": "bfc8c8e82c8683d2",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1890,
+        "y": 760,
+        "wires": [
+            [
+                "f71c22c8c5bfa16d"
+            ]
+        ]
+    },
+    {
+        "id": "db8a800538f35926",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1890,
+        "y": 800,
+        "wires": [
+            [
+                "f71c22c8c5bfa16d"
+            ]
+        ]
+    },
+    {
+        "id": "af785d361d0ebdeb",
+        "type": "ui_template",
+        "z": "7d8f3f86659c2746",
+        "group": "452582615a482b0f",
+        "name": "Cancel",
+        "order": 6,
+        "width": 2,
+        "height": 1,
+        "format": "\n<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: 'Cancel'})\"> \n    Cancel<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 460,
+        "y": 860,
+        "wires": [
+            [
+                "14882e7b54854f85"
+            ]
+        ]
+    },
+    {
+        "id": "14882e7b54854f85",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "clear data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 860,
+        "wires": [
+            [
+                "05b10af949cb7818",
+                "c1b4c2c1d97d8e7e",
+                "aa0e045595fdedf7",
+                "92d98fd27a82e192"
+            ]
+        ]
+    },
+    {
+        "id": "f71c22c8c5bfa16d",
+        "type": "link out",
+        "z": "7d8f3f86659c2746",
+        "name": "to update",
+        "mode": "link",
+        "links": [
+            "788b0b99111a152d"
+        ],
+        "x": 2140,
+        "y": 780,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "788b0b99111a152d",
+        "type": "link in",
+        "z": "7d8f3f86659c2746",
+        "name": "from update",
+        "links": [
+            "f71c22c8c5bfa16d"
+        ],
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "ec154c27d4399581"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d237f996a072ee5b",
+        "type": "link in",
+        "z": "7d8f3f86659c2746",
+        "name": "from clear",
+        "links": [
+            "4185281c505752d5",
+            "fcbad1153901aece"
+        ],
+        "x": 460,
+        "y": 820,
+        "wires": [
+            [
+                "14882e7b54854f85"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "0e45e0da9c344b49",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "check vehicles",
+        "func": "msg.topic = \"SELECT * FROM vehicles WHERE vehicle_id='\" + msg.payload + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 780,
+        "wires": [
+            [
+                "53280e70e79b07e6"
+            ]
+        ]
+    },
+    {
+        "id": "53280e70e79b07e6",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "",
+        "name": "vehicles table",
+        "x": 1440,
+        "y": 780,
+        "wires": [
+            [
+                "6f2fa1bbbfed734d"
+            ]
+        ]
+    },
+    {
+        "id": "c16a4bddf611f403",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "check vehicles",
+        "func": "msg.topic = \"SELECT * FROM vehicles WHERE vehicle_id='\" + msg.payload + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1144,
+        "y": 518,
+        "wires": [
+            [
+                "7dec39d0e403a448"
+            ]
+        ]
+    },
+    {
+        "id": "7dec39d0e403a448",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "",
+        "name": "vehicles table",
+        "x": 1440,
+        "y": 520,
+        "wires": [
+            [
+                "f05f8d22df5dba82"
+            ]
+        ]
+    },
+    {
+        "id": "f05f8d22df5dba82",
+        "type": "switch",
+        "z": "7d8f3f86659c2746",
+        "name": "is text empty?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1660,
+        "y": 520,
+        "wires": [
+            [
+                "7a202b7975d1dc12"
+            ],
+            [
+                "593e4b8830c232a4"
+            ]
+        ]
+    },
+    {
+        "id": "7a202b7975d1dc12",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1890,
+        "y": 500,
+        "wires": [
+            [
+                "f6ff3d0f1804639c"
+            ]
+        ]
+    },
+    {
+        "id": "593e4b8830c232a4",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1890,
+        "y": 540,
+        "wires": [
+            [
+                "f6ff3d0f1804639c"
+            ]
+        ]
+    },
+    {
+        "id": "f6ff3d0f1804639c",
+        "type": "link out",
+        "z": "7d8f3f86659c2746",
+        "name": "to delete",
+        "mode": "link",
+        "links": [
+            "54f3eebf9430c40e"
+        ],
+        "x": 2140,
+        "y": 520,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "54f3eebf9430c40e",
+        "type": "link in",
+        "z": "7d8f3f86659c2746",
+        "name": "from delete",
+        "links": [
+            "f6ff3d0f1804639c"
+        ],
+        "x": 280,
+        "y": 720,
+        "wires": [
+            [
+                "ff0b1c13e0cce4f0"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "6484659f39d218c2",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "vehicle_number",
+        "label": "Registration",
+        "tooltip": "",
+        "group": "59a3105b21a4eb5e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 880,
+        "y": 440,
+        "wires": [
+            [
+                "61220b27542207a8"
+            ]
+        ]
+    },
+    {
+        "id": "61220b27542207a8",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_number",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92d98fd27a82e192",
+        "type": "ui_text_input",
+        "z": "7d8f3f86659c2746",
+        "name": "new_vehicle_number",
+        "label": "Registration",
+        "tooltip": "",
+        "group": "452582615a482b0f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 900,
+        "y": 940,
+        "wires": [
+            [
+                "23c9c1aeb7fb76d9"
+            ]
+        ]
+    },
+    {
+        "id": "23c9c1aeb7fb76d9",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "new_vehicle_number",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "703fe1539e559efe",
+        "type": "inject",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM vehicles WHERE vehicle_flag=0;",
+        "x": 750,
+        "y": 1160,
+        "wires": [
+            [
+                "17afee6dda6fd31d"
+            ]
+        ]
+    },
+    {
+        "id": "17afee6dda6fd31d",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "",
+        "name": "",
+        "x": 930,
+        "y": 1160,
+        "wires": [
+            [
+                "39d62354253f3daa"
+            ]
+        ]
+    },
+    {
+        "id": "39d62354253f3daa",
+        "type": "switch",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1110,
+        "y": 1160,
+        "wires": [
+            [],
+            [
+                "a7289e4c491aeb49",
+                "002fb213f9d8d26a",
+                "7a3c2bf35e7d7891"
+            ]
+        ]
+    },
+    {
+        "id": "a7289e4c491aeb49",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "insert statement",
+        "func": "msg.topic = \"INSERT INTO vehicles (vehicle_id, vehicle_desc, vehicle_name, vehicle_number, vehicle_flag) \" +\n    \"VALUES ('\" + msg.payload[0].vehicle_id + \"', '\" + msg.payload[0].vehicle_desc + \"', '\" + msg.payload[0].vehicle_name + \"', '\" + msg.payload[0].vehicle_number + \"', '1' );\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1160,
+        "wires": [
+            [
+                "b2843eff980ae37c"
+            ]
+        ]
+    },
+    {
+        "id": "b2843eff980ae37c",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "347578936cd017ea",
+        "name": "",
+        "x": 1510,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dbf88ad459693fb2",
+        "type": "mysql",
+        "z": "7d8f3f86659c2746",
+        "mydb": "",
+        "name": "",
+        "x": 1570,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "002fb213f9d8d26a",
+        "type": "function",
+        "z": "7d8f3f86659c2746",
+        "name": "set statement",
+        "func": "msg.topic = \"UPDATE vehicles SET vehicle_flag = 1 WHERE id = '\" + msg.payload[0].id + \"'\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1220,
+        "wires": [
+            [
+                "3d9502fc9e8ac028"
+            ]
+        ]
+    },
+    {
+        "id": "3d9502fc9e8ac028",
+        "type": "delay",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1455,
+        "y": 1220,
+        "wires": [
+            [
+                "dbf88ad459693fb2"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9c81a83e941b2304",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "SELECT * FROM vehicles WHERE vehicle_flag=0;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1360,
+        "y": 1260,
+        "wires": [
+            [
+                "6aa457eb2a5a1dbf"
+            ]
+        ]
+    },
+    {
+        "id": "7a3c2bf35e7d7891",
+        "type": "delay",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1235,
+        "y": 1260,
+        "wires": [
+            [
+                "9c81a83e941b2304"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7cec12befe392acf",
+        "type": "change",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "SELECT * FROM vehicles WHERE vehicle_flag=0;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 1120,
+        "wires": [
+            [
+                "17afee6dda6fd31d"
+            ]
+        ]
+    },
+    {
+        "id": "6aa457eb2a5a1dbf",
+        "type": "link out",
+        "z": "7d8f3f86659c2746",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "82e2691e49f4b6e0"
+        ],
+        "x": 1485,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "82e2691e49f4b6e0",
+        "type": "link in",
+        "z": "7d8f3f86659c2746",
+        "name": "link in 2",
+        "links": [
+            "6aa457eb2a5a1dbf"
+        ],
+        "x": 785,
+        "y": 1200,
+        "wires": [
+            [
+                "17afee6dda6fd31d"
+            ]
+        ]
+    },
+    {
+        "id": "012596235d9dcc96",
+        "type": "delay",
+        "z": "7d8f3f86659c2746",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 575,
+        "y": 1120,
+        "wires": [
+            [
+                "7cec12befe392acf"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "86ee9c0974c2067f",
+        "type": "ui_group",
+        "name": "Data Vehicles ",
+        "tab": "a911b40ac91b56f0",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "59a3105b21a4eb5e",
+        "type": "ui_group",
+        "name": "Add a new Vehicle",
+        "tab": "a911b40ac91b56f0",
+        "order": 1,
+        "disp": true,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f1f6c7ea23073d13",
+        "type": "ui_group",
+        "name": "Remove Vehicle",
+        "tab": "a911b40ac91b56f0",
+        "order": 4,
+        "disp": true,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "452582615a482b0f",
+        "type": "ui_group",
+        "name": "Update Data Vehicle",
+        "tab": "a911b40ac91b56f0",
+        "order": 3,
+        "disp": true,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "347578936cd017ea",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3308",
+        "db": "yphe_login",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "a911b40ac91b56f0",
+        "type": "ui_tab",
+        "name": "Vehicles",
+        "icon": "directions_car",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
+    }
+]

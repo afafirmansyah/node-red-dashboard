@@ -1,0 +1,6322 @@
+[
+    {
+        "id": "bf1896ca1a6fda44",
+        "type": "tab",
+        "label": "Dispensing",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "22a807a2a8536b15",
+        "type": "tab",
+        "label": "Drivers",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b44a20cce056e1e4",
+        "type": "tab",
+        "label": "Vehicles",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "78218c677a5b311f",
+        "type": "group",
+        "z": "22a807a2a8536b15",
+        "style": {
+            "stroke": "#2e333a",
+            "stroke-opacity": "1",
+            "fill": "#383c45",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#dddddd"
+        },
+        "nodes": [
+            "5ebef75bbb231b31",
+            "8e3987d96a45436a",
+            "2d88f43bbc223981",
+            "dca8ba01dc70e0de",
+            "daaeaf3bda9fa1b7",
+            "6e8ba7f697013fde",
+            "8d8c5e9814e931d1"
+        ],
+        "x": 194,
+        "y": 1179,
+        "w": 1072,
+        "h": 122
+    },
+    {
+        "id": "9a3417e1e68984af",
+        "type": "group",
+        "z": "b44a20cce056e1e4",
+        "style": {
+            "stroke": "#2e333a",
+            "stroke-opacity": "1",
+            "fill": "#383c45",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#dddddd"
+        },
+        "nodes": [
+            "379da53731ee620e",
+            "3e4e06fd0cb24185",
+            "ed1f62cbb3697f52",
+            "ddad35169b146f31",
+            "f0492f7d863b0e43",
+            "f880e0d5827a0094",
+            "dd570172eb99caf0"
+        ],
+        "x": 194,
+        "y": 1179,
+        "w": 992,
+        "h": 122
+    },
+    {
+        "id": "f32b56fa06cace8a",
+        "type": "group",
+        "z": "22a807a2a8536b15",
+        "style": {
+            "stroke": "#2e333a",
+            "stroke-opacity": "1",
+            "fill": "#383c45",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#dddddd"
+        },
+        "nodes": [
+            "95b4d80b249a5604",
+            "fb35738d0b099cad",
+            "259e6741d7337885",
+            "7f8f6d38fcc4b70d",
+            "5e95789b6fb001ed",
+            "c6a179acb32a9a27",
+            "eaeed9d974c47b97",
+            "9fdca1537c18bf1d",
+            "904a61394b8b3e67",
+            "69c47e8049b33128",
+            "d842e2adf3fd3fe2",
+            "3528e693367332b1",
+            "9026c79865de48f4",
+            "f4d2d33726516220",
+            "2344d699873a6636",
+            "66b0ba1c1f1abbf6",
+            "1e9bfca31f400d82",
+            "1e59fcd76b0e889a",
+            "acdf2a3a594bcd23",
+            "2b5955aa40802a91",
+            "5aea4c6909ee29d4",
+            "10f64adf80b504cc",
+            "5f28bdeaf34de961",
+            "fadc76f08bbdbc0b",
+            "79dc2c09520925d6",
+            "1d2c2f56fc2fdeed",
+            "1449a6dbc94aedfd",
+            "cca79196ce0da93e",
+            "be4f7a4e4d5aefb5",
+            "bed152e0188e562d",
+            "d62a5962b55fc05c",
+            "4933c045a6cd7f35",
+            "8d26b053c60ecd77",
+            "70098fd7f24f0209",
+            "18e21503610da303",
+            "9818613932780aa8",
+            "c1beadda2b8e3804",
+            "b8804214c0ed111e",
+            "c5b180e8078c09eb"
+        ],
+        "x": 194,
+        "y": 159,
+        "w": 2472,
+        "h": 482
+    },
+    {
+        "id": "700a70cc805fd2e6",
+        "type": "group",
+        "z": "22a807a2a8536b15",
+        "style": {
+            "stroke": "#2e333a",
+            "stroke-opacity": "1",
+            "fill": "#383c45",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#dddddd"
+        },
+        "nodes": [
+            "0184b6407d43762e",
+            "03da7f843913f3e3",
+            "c10c4998def92f3f",
+            "074fc8d03231104e",
+            "f3ec7a154555e211",
+            "67cc45c85d72e563",
+            "b347c776120e10b1",
+            "a9a78f36df4cccac",
+            "96d90b05552bb988",
+            "0d3af801168ca0bc",
+            "00f25d315bf4cc90",
+            "cfed6e5c85a42052",
+            "61e6f4a60e6f915e",
+            "0a4fc155a056e546",
+            "4dfcdb23afec7bd3",
+            "2d2143e1b492ea41",
+            "82387458167fbb97",
+            "f2906a5e897312a8",
+            "4a40435d431c200b",
+            "14e7983f9cb53798",
+            "cc29b55aa76224c3",
+            "55a48e39a1f6f272",
+            "f6b3365350f7f389",
+            "23707b1b8adb58c1",
+            "0aac35d548772383",
+            "2ad61ec9ae8744c0",
+            "87ded6f51893a862",
+            "23c9f54dcb51ab87",
+            "f6824ec8b1f08947",
+            "8156dbc625d9c3aa",
+            "cb5faadde127d23b",
+            "3f999768cac7badc",
+            "d279309ac67e8cda",
+            "0b986c767501094f"
+        ],
+        "x": 194,
+        "y": 679,
+        "w": 1792,
+        "h": 462
+    },
+    {
+        "id": "b4c7c849b202ecdf",
+        "type": "group",
+        "z": "b44a20cce056e1e4",
+        "style": {
+            "stroke": "#2e333a",
+            "stroke-opacity": "1",
+            "fill": "#383c45",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#dddddd"
+        },
+        "nodes": [
+            "6ff850ea283b06c5",
+            "b6ada05cef95b26d",
+            "aefdc18ee7f8ab75",
+            "9dc4edfb2c2dbb64",
+            "c717dd5e88ccf09a",
+            "2d2cc1096d1f4efb",
+            "b2e0598f222c0443",
+            "6ed76c02694acd94",
+            "c8705999a5d68da1",
+            "4fd7a937d72ed45e",
+            "a17e49ee629f6a88",
+            "18c0df6e244d3944",
+            "0d053a8aba00f86e",
+            "da313a68df59aafe",
+            "1abe18759dec2b47",
+            "26e2e13d085b04d0",
+            "9a13cbe7240898b2",
+            "eaad5bfd769cb9cd",
+            "ad4cb257af1807bb",
+            "17b5d5b3ada9253c",
+            "b118e5a4b37ca9c8",
+            "76cb8035a93c8c1f",
+            "7d3be2b6951bf428",
+            "f636e46101d7388e",
+            "6416371bad6dcaa7",
+            "2edcd418cd128094",
+            "04d5f560f625c3bf",
+            "e84921f2520ad356",
+            "d68114ea545f7882",
+            "3b1df35171b1075c",
+            "1d2d0df69bd70a2c",
+            "c670363b97e5ad0f",
+            "ffd0036d08345d49",
+            "0adcc5fb22c63ab2"
+        ],
+        "x": 194,
+        "y": 659,
+        "w": 1792,
+        "h": 462
+    },
+    {
+        "id": "2a98742b23419b62",
+        "type": "group",
+        "z": "b44a20cce056e1e4",
+        "style": {
+            "stroke": "#2e333a",
+            "stroke-opacity": "1",
+            "fill": "#383c45",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#dddddd"
+        },
+        "nodes": [
+            "457c66dd3a22c9a1",
+            "1677c74c4ecec3f9",
+            "05378e743b328086",
+            "a7e4090d4286b321",
+            "225da4cae0c3f990",
+            "c00654da0f097538",
+            "7f9de29a66861832",
+            "0304a78ad453247f",
+            "92f5fb60133d0ed6",
+            "2343fb9a404f38a0",
+            "ff447c3c05e85608",
+            "85d1f166a9cfed88",
+            "e2ff9051e315f2a2",
+            "5ab816d7c47fa864",
+            "43175cc2d0ec12ba",
+            "48aa09445a37674d",
+            "a63d854679a8bbbb",
+            "793bea21c6b25a7a",
+            "c78fd8a78af67d5f",
+            "f39040f1af0f56be",
+            "eeaae78bea7630ac",
+            "7d92be940938ccaf",
+            "2b7aafc51ff2a6f9",
+            "0f93a9624c841785",
+            "4295550b9b84db4e",
+            "182d84456fd5b6e5",
+            "02cea55159e1db96",
+            "7794081b608ec711",
+            "7be46be135bddb1d",
+            "da17d1d1a58a5f25",
+            "bade2067e36a739d",
+            "9456f54a33a3184d",
+            "b3820e7bd86848a8",
+            "ed94f36ce3060336",
+            "fc3e166d89058856",
+            "4d5662615d47bf59",
+            "da38b40613f99db9",
+            "9313b49708c293b3",
+            "cf27f9c7274dbc86"
+        ],
+        "x": 194,
+        "y": 119,
+        "w": 2472,
+        "h": 482
+    },
+    {
+        "id": "6ee71d8495acfa1f",
+        "type": "serial-port",
+        "serialport": "COM3",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "100",
+        "bin": "bin",
+        "out": "interbyte",
+        "addchar": "",
+        "responsetimeout": "5000"
+    },
+    {
+        "id": "524bd76d341109fd",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "PT. YERRY PRIMATAMA HOSINDO [ENGINEERING DIVISION]",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "icon",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e179a460df208a4e",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "mydatabase",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "da4c87c65c576e69",
+        "type": "ui_tab",
+        "name": "Drivers",
+        "icon": "people",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "339fe1241286525a",
+        "type": "ui_group",
+        "name": "Add Driver",
+        "tab": "da4c87c65c576e69",
+        "order": 1,
+        "disp": false,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b6cc0c8532dcd156",
+        "type": "ui_tab",
+        "name": "Vehicles",
+        "icon": "directions_car",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "62c3b4bcf79562db",
+        "type": "ui_group",
+        "name": "Add Vehicles",
+        "tab": "b6cc0c8532dcd156",
+        "order": 1,
+        "disp": false,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9b246d8416b44c2d",
+        "type": "ui_group",
+        "name": "View Drivers",
+        "tab": "da4c87c65c576e69",
+        "order": 2,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d2104847dacfa161",
+        "type": "ui_group",
+        "name": "Delete Driver",
+        "tab": "da4c87c65c576e69",
+        "order": 3,
+        "disp": false,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "771f70e853e5665b",
+        "type": "ui_group",
+        "name": "Delete Vehicle",
+        "tab": "b6cc0c8532dcd156",
+        "order": 3,
+        "disp": false,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7249b83cd31f8944",
+        "type": "ui_spacer",
+        "z": "b44a20cce056e1e4",
+        "name": "spacer",
+        "group": "62c3b4bcf79562db",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d2561c2f1941c49e",
+        "type": "ui_spacer",
+        "z": "b44a20cce056e1e4",
+        "name": "spacer",
+        "group": "62c3b4bcf79562db",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "eab1876f668a0092",
+        "type": "ui_spacer",
+        "z": "b44a20cce056e1e4",
+        "name": "spacer",
+        "group": "771f70e853e5665b",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "fc72b0ab73152a08",
+        "type": "ui_spacer",
+        "z": "b44a20cce056e1e4",
+        "name": "spacer",
+        "group": "771f70e853e5665b",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "86ee9c0974c2067f",
+        "type": "ui_group",
+        "name": "View Vehicles ",
+        "tab": "b6cc0c8532dcd156",
+        "order": 2,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "30c53acdef7f3194",
+        "type": "ui_tab",
+        "name": "Dispensing",
+        "icon": "local_gas_station",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "871bf37dee35b812",
+        "type": "ui_group",
+        "name": "Start Pump",
+        "tab": "30c53acdef7f3194",
+        "order": 1,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "45c2b0fada35658c",
+        "type": "ui_group",
+        "name": "Transactions",
+        "tab": "30c53acdef7f3194",
+        "order": 3,
+        "disp": false,
+        "width": "17",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9c2005d7a47d91e9",
+        "type": "ui_group",
+        "name": "Volume",
+        "tab": "30c53acdef7f3194",
+        "order": 2,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3840d01c73196be6",
+        "type": "modbus-client",
+        "name": "PLC",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.10.99",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "8e4884bb.ff1388",
+        "type": "ui_tab",
+        "name": "testing",
+        "icon": "dashboard"
+    },
+    {
+        "id": "9e2c60114ea5af54",
+        "type": "ui_spacer",
+        "z": "22a807a2a8536b15",
+        "name": "spacer",
+        "group": "339fe1241286525a",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8e501af720e55f98",
+        "type": "ui_spacer",
+        "z": "22a807a2a8536b15",
+        "name": "spacer",
+        "group": "339fe1241286525a",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "75e4f6e81b002921",
+        "type": "ui_spacer",
+        "z": "22a807a2a8536b15",
+        "name": "spacer",
+        "group": "339fe1241286525a",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9a7344e54194166b",
+        "type": "ui_spacer",
+        "z": "22a807a2a8536b15",
+        "name": "spacer",
+        "group": "339fe1241286525a",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a579db698ffd1f59",
+        "type": "ui_spacer",
+        "z": "22a807a2a8536b15",
+        "name": "spacer",
+        "group": "d2104847dacfa161",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0cc985db62da552a",
+        "type": "ui_spacer",
+        "z": "22a807a2a8536b15",
+        "name": "spacer",
+        "group": "d2104847dacfa161",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "fae98eaad698c569",
+        "type": "ui_spacer",
+        "z": "22a807a2a8536b15",
+        "name": "spacer",
+        "group": "d2104847dacfa161",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "59fb3798616b18e8",
+        "type": "ui_spacer",
+        "z": "22a807a2a8536b15",
+        "name": "spacer",
+        "group": "d2104847dacfa161",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2a581bf21eedf5a1",
+        "type": "buffer-parser",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "hex",
+                "name": "rfid",
+                "offset": 7,
+                "length": 4,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 1330,
+        "y": 220,
+        "wires": [
+            [
+                "4b946065bcb52252"
+            ]
+        ]
+    },
+    {
+        "id": "e9cad83843e9210f",
+        "type": "ui_toast",
+        "z": "bf1896ca1a6fda44",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "CANCEL",
+        "raw": true,
+        "className": "",
+        "topic": "Tap your keys!",
+        "name": "",
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "a4e63a401d28fe96",
+                "480a669f52dab2d8"
+            ]
+        ]
+    },
+    {
+        "id": "1ffd16252b04427c",
+        "type": "serial request",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "serial": "6ee71d8495acfa1f",
+        "x": 1050,
+        "y": 220,
+        "wires": [
+            [
+                "2a581bf21eedf5a1",
+                "8e47f3017e270290"
+            ]
+        ]
+    },
+    {
+        "id": "a4e63a401d28fe96",
+        "type": "switch",
+        "z": "bf1896ca1a6fda44",
+        "name": "ok",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 890,
+        "y": 280,
+        "wires": [
+            [
+                "1ffd16252b04427c",
+                "39abe39bc7b628ec"
+            ]
+        ]
+    },
+    {
+        "id": "4b946065bcb52252",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "driver_id",
+                "pt": "flow",
+                "to": "payload.rfid",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1550,
+        "y": 220,
+        "wires": [
+            [
+                "83b092c21c38b1db"
+            ]
+        ]
+    },
+    {
+        "id": "ed65d83c3a9c9f77",
+        "type": "ui_text",
+        "z": "bf1896ca1a6fda44",
+        "group": "871bf37dee35b812",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "text notification",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1320,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "39abe39bc7b628ec",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "tap message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tap your driver key to refuel!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 280,
+        "wires": [
+            [
+                "ed65d83c3a9c9f77"
+            ]
+        ]
+    },
+    {
+        "id": "e0fddf4bdb5d63f5",
+        "type": "delay",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 880,
+        "y": 360,
+        "wires": [
+            [
+                "294bbacc8232dfd6"
+            ]
+        ]
+    },
+    {
+        "id": "294bbacc8232dfd6",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "clear message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 320,
+        "wires": [
+            [
+                "ed65d83c3a9c9f77"
+            ]
+        ]
+    },
+    {
+        "id": "480a669f52dab2d8",
+        "type": "switch",
+        "z": "bf1896ca1a6fda44",
+        "name": "cancel",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CANCEL",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 890,
+        "y": 320,
+        "wires": [
+            [
+                "294bbacc8232dfd6"
+            ]
+        ]
+    },
+    {
+        "id": "700188ba09ce2790",
+        "type": "ui_template",
+        "z": "bf1896ca1a6fda44",
+        "group": "871bf37dee35b812",
+        "name": "start",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "format": "<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: '1'})\"> \n    Start<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 250,
+        "y": 280,
+        "wires": [
+            [
+                "4c55546c70f49b86"
+            ]
+        ]
+    },
+    {
+        "id": "4c55546c70f49b86",
+        "type": "function",
+        "z": "bf1896ca1a6fda44",
+        "name": "format notification",
+        "func": "msg.payload = `<!DOCTYPE html>\n                <html><head>\n                <title>Tap your keys!</title>\n                </head>\n                <body>\n                   <div style = \"padding: 0 0.5em 0 0.5em; text-align: center;\">\n                      <p> Are you going to refuel the unit? </p>\n                   </div>\n                </body>\n                <style>\n                   .md-title {\n                       margin-bottom: 0;\n                       font-size: 30px;\n                       text-align: center;\n                       padding: 0 0.5em 0 0.5em;\n                   }\n                </style>\n                </html>`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "e9cad83843e9210f"
+            ]
+        ]
+    },
+    {
+        "id": "83b092c21c38b1db",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "check driver",
+        "mode": "link",
+        "links": [
+            "e1c5f5854c4409df"
+        ],
+        "x": 1850,
+        "y": 220,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "d871a7586344fd97",
+        "type": "mysql",
+        "z": "bf1896ca1a6fda44",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 670,
+        "y": 420,
+        "wires": [
+            [
+                "ccaf9388775b0ee0",
+                "c595834d6b9da3eb"
+            ]
+        ]
+    },
+    {
+        "id": "fcd29e3315c5b25f",
+        "type": "function",
+        "z": "bf1896ca1a6fda44",
+        "name": "check on drivers",
+        "func": "msg = {\n    driver_id: flow.get(\"driver_id\"),\n}\n\nmsg.topic = \"SELECT * FROM drivers WHERE driver_id='\" + msg.driver_id + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "d871a7586344fd97"
+            ]
+        ]
+    },
+    {
+        "id": "dea440ff7a6cc6a3",
+        "type": "function",
+        "z": "bf1896ca1a6fda44",
+        "name": "check on vehicles",
+        "func": "msg = {\n    vehicle_id: flow.get(\"vehicle_id\"),\n}\n\nmsg.topic = \"SELECT * FROM vehicles WHERE vehicle_id='\" + msg.vehicle_id + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "e03a4122d04a7a0c"
+            ]
+        ]
+    },
+    {
+        "id": "e03a4122d04a7a0c",
+        "type": "mysql",
+        "z": "bf1896ca1a6fda44",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 670,
+        "y": 580,
+        "wires": [
+            [
+                "c774bba00cac1a8e",
+                "49e9ec156d34661c"
+            ]
+        ]
+    },
+    {
+        "id": "ccaf9388775b0ee0",
+        "type": "switch",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 890,
+        "y": 420,
+        "wires": [
+            [
+                "ebdb0e6c69bb105d"
+            ],
+            [
+                "a567d96e808d2c9a",
+                "25354eebc6805910"
+            ]
+        ]
+    },
+    {
+        "id": "ebdb0e6c69bb105d",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "not registered",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red>Failed! Key not registered</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 400,
+        "wires": [
+            [
+                "ed65d83c3a9c9f77",
+                "f8e967dc3529912b",
+                "5d3f3513bbbc76eb"
+            ]
+        ]
+    },
+    {
+        "id": "e1c5f5854c4409df",
+        "type": "link in",
+        "z": "bf1896ca1a6fda44",
+        "name": "check driver",
+        "links": [
+            "83b092c21c38b1db"
+        ],
+        "x": 230,
+        "y": 420,
+        "wires": [
+            [
+                "fcd29e3315c5b25f"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "6aa7a9aaa8a2cad0",
+        "type": "serial request",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "serial": "6ee71d8495acfa1f",
+        "x": 1350,
+        "y": 440,
+        "wires": [
+            [
+                "16dfdaf034d53e50",
+                "d069684e9adfa28e"
+            ]
+        ]
+    },
+    {
+        "id": "16dfdaf034d53e50",
+        "type": "buffer-parser",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "hex",
+                "name": "rfid",
+                "offset": 7,
+                "length": 4,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 1570,
+        "y": 440,
+        "wires": [
+            [
+                "1033310331fd7d4e"
+            ]
+        ]
+    },
+    {
+        "id": "1033310331fd7d4e",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_id",
+                "pt": "flow",
+                "to": "payload.rfid",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1830,
+        "y": 440,
+        "wires": [
+            [
+                "39947f0c2a213bd3"
+            ]
+        ]
+    },
+    {
+        "id": "39947f0c2a213bd3",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "check vehicle",
+        "mode": "link",
+        "links": [
+            "cba8195f616b782d"
+        ],
+        "x": 2080,
+        "y": 440,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "cba8195f616b782d",
+        "type": "link in",
+        "z": "bf1896ca1a6fda44",
+        "name": "check vehicle",
+        "links": [
+            "39947f0c2a213bd3"
+        ],
+        "x": 230,
+        "y": 580,
+        "wires": [
+            [
+                "dea440ff7a6cc6a3"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a567d96e808d2c9a",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "tap message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tap your vehicle key to continue!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 440,
+        "wires": [
+            [
+                "ed65d83c3a9c9f77",
+                "6aa7a9aaa8a2cad0",
+                "37c5d5413e8414c3"
+            ]
+        ]
+    },
+    {
+        "id": "c774bba00cac1a8e",
+        "type": "switch",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 890,
+        "y": 580,
+        "wires": [
+            [
+                "2e2099fbdc7b1aba"
+            ],
+            [
+                "0263d140c08d695b"
+            ]
+        ]
+    },
+    {
+        "id": "2e2099fbdc7b1aba",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "not registered",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red>Failed! Key not registered</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 560,
+        "wires": [
+            [
+                "ed65d83c3a9c9f77",
+                "37c5d5413e8414c3",
+                "88f5992d3941802b"
+            ]
+        ]
+    },
+    {
+        "id": "b27e83bc03c91a63",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "status message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=green size=5px>Pump ON!</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 640,
+        "wires": [
+            [
+                "ed65d83c3a9c9f77"
+            ]
+        ]
+    },
+    {
+        "id": "148fc949ea88405e",
+        "type": "ui_template",
+        "z": "bf1896ca1a6fda44",
+        "group": "871bf37dee35b812",
+        "name": "stop",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "format": "<md-button class=\"vibrate filled touched smallfont rounded\" style=\"background-color:#007CBE\" ng-click=\"send({payload: '1'})\"> \n    Stop<br/>\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 890,
+        "y": 760,
+        "wires": [
+            [
+                "12ff5f446240c7f9",
+                "a91af3706f85a1ca",
+                "ef8d62c721be9723",
+                "a53e990a466d954c",
+                "d4f64bf8b87ec935"
+            ]
+        ]
+    },
+    {
+        "id": "f8e967dc3529912b",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "6f575711a34fd4f9"
+        ],
+        "x": 1320,
+        "y": 400,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "6f575711a34fd4f9",
+        "type": "link in",
+        "z": "bf1896ca1a6fda44",
+        "name": "clear message",
+        "links": [
+            "f8e967dc3529912b",
+            "37c5d5413e8414c3",
+            "360fa1782bccb47b",
+            "c31816f80111ff61",
+            "a91af3706f85a1ca"
+        ],
+        "x": 670,
+        "y": 360,
+        "wires": [
+            [
+                "e0fddf4bdb5d63f5"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "37c5d5413e8414c3",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "6f575711a34fd4f9"
+        ],
+        "x": 1320,
+        "y": 600,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "75e86c2c96d7441a",
+        "type": "inject",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM transactions ORDER BY trans_id DESC;",
+        "x": 230,
+        "y": 980,
+        "wires": [
+            [
+                "517946e84c2e72c3"
+            ]
+        ]
+    },
+    {
+        "id": "a18b23795538c520",
+        "type": "ui_table",
+        "z": "bf1896ca1a6fda44",
+        "group": "45c2b0fada35658c",
+        "name": "display reports",
+        "order": 1,
+        "width": 17,
+        "height": 7,
+        "columns": [
+            {
+                "field": "trans_date",
+                "title": "Date",
+                "width": "10px",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "trans_time",
+                "title": "Time",
+                "width": "9px",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_name",
+                "title": "Driver Name",
+                "width": "15px",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_desc",
+                "title": "License",
+                "width": "10px",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_desc",
+                "title": "Vehicle Desc",
+                "width": "21px",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_name",
+                "title": "Make",
+                "width": "10px",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_number",
+                "title": "Registration",
+                "width": "13px",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "trans_volume",
+                "title": "Volume",
+                "width": "11px",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1720,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "517946e84c2e72c3",
+        "type": "mysql",
+        "z": "bf1896ca1a6fda44",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 1530,
+        "y": 1060,
+        "wires": [
+            [
+                "a18b23795538c520"
+            ]
+        ]
+    },
+    {
+        "id": "c1b06f416267d69b",
+        "type": "ui_template",
+        "z": "bf1896ca1a6fda44",
+        "group": "871bf37dee35b812",
+        "name": "tabulator",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .tabulator {\n\n    }\n\n    /****/\n\n    /* Header formatieren */\n    .tabulator-col-title {\n    text-align: center;\n    }\n\n    /****/\n    .tabulator .tabulator-header {\n\n    }\n\n    .tabulator-col-content {\n\n    }\n\n    .tabulator .tabulator-header .tabulator-col {\n\n    }\n\n    .tabulator-arrow {\n\n    }\n\n    .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {\n\n    }\n\n    /* Zellen formatieren*/\n    .tabulator-table .tabulator-row-odd {\n        background-color: #efefef;\n\n    }\n\n    /****/\n    .tabulator-table .tabulator-row-even {\n\n    }\n\n    /****/\n    .tabulator-row .tabulator-cell {\n\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1740,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5881bd159904eac",
+        "type": "ui_digital_display",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "group": "9c2005d7a47d91e9",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "digits": "7",
+        "decimals": "2",
+        "x": 560,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "4b33a542ecc6a46c",
+        "type": "ui_led",
+        "z": "bf1896ca1a6fda44",
+        "order": 5,
+        "group": "871bf37dee35b812",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "ready",
+        "x": 650,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "0263d140c08d695b",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "on indicator",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 600,
+        "wires": [
+            [
+                "1f3eda8f7371f00b"
+            ]
+        ]
+    },
+    {
+        "id": "12ff5f446240c7f9",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "off indicator",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 720,
+        "wires": [
+            [
+                "bcef10f66a40ba39",
+                "1f3eda8f7371f00b"
+            ]
+        ]
+    },
+    {
+        "id": "bcef10f66a40ba39",
+        "type": "ui_led",
+        "z": "bf1896ca1a6fda44",
+        "order": 4,
+        "group": "871bf37dee35b812",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "status",
+        "x": 1350,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "25354eebc6805910",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "led indicator",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 500,
+        "wires": [
+            [
+                "bcef10f66a40ba39"
+            ]
+        ]
+    },
+    {
+        "id": "8e47f3017e270290",
+        "type": "switch",
+        "z": "bf1896ca1a6fda44",
+        "name": "request timeout",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1320,
+        "y": 180,
+        "wires": [
+            [
+                "360fa1782bccb47b",
+                "725e1d6a9d43b29e",
+                "680973965a72616d"
+            ]
+        ]
+    },
+    {
+        "id": "360fa1782bccb47b",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "6f575711a34fd4f9"
+        ],
+        "x": 1560,
+        "y": 140,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "d069684e9adfa28e",
+        "type": "switch",
+        "z": "bf1896ca1a6fda44",
+        "name": "request timeout",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1560,
+        "y": 480,
+        "wires": [
+            [
+                "c31816f80111ff61",
+                "3172a9dbb016a1a9",
+                "8009cb2ab6ba4e35"
+            ]
+        ]
+    },
+    {
+        "id": "c31816f80111ff61",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "6f575711a34fd4f9"
+        ],
+        "x": 1840,
+        "y": 520,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "725e1d6a9d43b29e",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "off indicator",
+        "mode": "link",
+        "links": [
+            "9cd29a57658df8d8"
+        ],
+        "x": 1570,
+        "y": 100,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "3172a9dbb016a1a9",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "off indicator",
+        "mode": "link",
+        "links": [
+            "9cd29a57658df8d8"
+        ],
+        "x": 1850,
+        "y": 560,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "9cd29a57658df8d8",
+        "type": "link in",
+        "z": "bf1896ca1a6fda44",
+        "name": "off indicator",
+        "links": [
+            "3172a9dbb016a1a9",
+            "725e1d6a9d43b29e",
+            "88f5992d3941802b",
+            "5d3f3513bbbc76eb"
+        ],
+        "x": 870,
+        "y": 720,
+        "wires": [
+            [
+                "12ff5f446240c7f9"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a91af3706f85a1ca",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "6f575711a34fd4f9"
+        ],
+        "x": 1080,
+        "y": 880,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "680973965a72616d",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "request timeout",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Request timeout!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 180,
+        "wires": [
+            [
+                "86abdde4c293c591"
+            ]
+        ]
+    },
+    {
+        "id": "8009cb2ab6ba4e35",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "request timeout",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Request timeout!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1840,
+        "y": 480,
+        "wires": [
+            [
+                "a6eedef49ccb3beb"
+            ]
+        ]
+    },
+    {
+        "id": "86abdde4c293c591",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "request timeout",
+        "mode": "link",
+        "links": [
+            "bdbaace1a2896cde"
+        ],
+        "x": 1840,
+        "y": 180,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "a6eedef49ccb3beb",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "request timeout",
+        "mode": "link",
+        "links": [
+            "bdbaace1a2896cde"
+        ],
+        "x": 2080,
+        "y": 480,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "bdbaace1a2896cde",
+        "type": "link in",
+        "z": "bf1896ca1a6fda44",
+        "name": "request timeout",
+        "links": [
+            "86abdde4c293c591",
+            "a6eedef49ccb3beb"
+        ],
+        "x": 1080,
+        "y": 360,
+        "wires": [
+            [
+                "ed65d83c3a9c9f77"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "88f5992d3941802b",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "off indicator",
+        "mode": "link",
+        "links": [
+            "9cd29a57658df8d8"
+        ],
+        "x": 1330,
+        "y": 560,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5d3f3513bbbc76eb",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "off indicator",
+        "mode": "link",
+        "links": [
+            "9cd29a57658df8d8"
+        ],
+        "x": 1330,
+        "y": 360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ef8d62c721be9723",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "stop disabled",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 800,
+        "wires": [
+            [
+                "148fc949ea88405e"
+            ]
+        ]
+    },
+    {
+        "id": "a53e990a466d954c",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "status message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red size=5px>Pump OFF!</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 760,
+        "wires": [
+            [
+                "ed65d83c3a9c9f77"
+            ]
+        ]
+    },
+    {
+        "id": "1f3eda8f7371f00b",
+        "type": "modbus-write",
+        "z": "bf1896ca1a6fda44",
+        "name": "M0",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "1",
+        "server": "3840d01c73196be6",
+        "emptyMsgOnFail": true,
+        "keepMsgProperties": true,
+        "x": 1350,
+        "y": 640,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f266947eb1bb425d",
+        "type": "modbus-read",
+        "z": "bf1896ca1a6fda44",
+        "name": "M1 M2",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "1",
+        "quantity": "2",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3840d01c73196be6",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 250,
+        "y": 640,
+        "wires": [
+            [],
+            [
+                "fe87f3223db39ff7",
+                "f10f62664acdc1e9"
+            ]
+        ]
+    },
+    {
+        "id": "fe87f3223db39ff7",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 680,
+        "wires": [
+            [
+                "4b33a542ecc6a46c"
+            ]
+        ]
+    },
+    {
+        "id": "6d5ca3b0be6840a8",
+        "type": "switch",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 890,
+        "y": 640,
+        "wires": [
+            [
+                "b27e83bc03c91a63",
+                "220fed8df54d1479"
+            ]
+        ]
+    },
+    {
+        "id": "220fed8df54d1479",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "stop enabled",
+        "mode": "link",
+        "links": [
+            "73913dcd4dcb01bc"
+        ],
+        "x": 1090,
+        "y": 680,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "73913dcd4dcb01bc",
+        "type": "link in",
+        "z": "bf1896ca1a6fda44",
+        "name": "stop enabled",
+        "links": [
+            "220fed8df54d1479",
+            "9582156ff9358ae9"
+        ],
+        "x": 470,
+        "y": 760,
+        "wires": [
+            [
+                "237a2cb87a5b010e"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "237a2cb87a5b010e",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "stop enabled",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 760,
+        "wires": [
+            [
+                "148fc949ea88405e"
+            ]
+        ]
+    },
+    {
+        "id": "7d10074f06eb3b15",
+        "type": "function",
+        "z": "bf1896ca1a6fda44",
+        "name": "convert",
+        "func": "msg.payload = (msg.payload.data[1] << 16) + msg.payload.data[0];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1260,
+        "wires": [
+            [
+                "d5881bd159904eac",
+                "a25d4a5ee4440199"
+            ]
+        ]
+    },
+    {
+        "id": "96c12c538d45088b",
+        "type": "modbus-read",
+        "z": "bf1896ca1a6fda44",
+        "name": "MD10",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "10",
+        "quantity": "2",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3840d01c73196be6",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 210,
+        "y": 1260,
+        "wires": [
+            [],
+            [
+                "7d10074f06eb3b15"
+            ]
+        ]
+    },
+    {
+        "id": "1adaa052569e1d54",
+        "type": "modbus-write",
+        "z": "bf1896ca1a6fda44",
+        "name": "M3",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "3",
+        "quantity": "1",
+        "server": "3840d01c73196be6",
+        "emptyMsgOnFail": true,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 2050,
+        "y": 840,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3929abf85e92a904",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "on indicator",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 840,
+        "wires": [
+            [
+                "1adaa052569e1d54",
+                "a0bfe37b4f2f9557"
+            ]
+        ]
+    },
+    {
+        "id": "4e639e215ef925b6",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "off indicator",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1810,
+        "y": 880,
+        "wires": [
+            [
+                "1adaa052569e1d54"
+            ]
+        ]
+    },
+    {
+        "id": "a0bfe37b4f2f9557",
+        "type": "delay",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1580,
+        "y": 880,
+        "wires": [
+            [
+                "4e639e215ef925b6"
+            ]
+        ]
+    },
+    {
+        "id": "d4f64bf8b87ec935",
+        "type": "delay",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1100,
+        "y": 840,
+        "wires": [
+            [
+                "3929abf85e92a904",
+                "12ab270e1db003a1"
+            ]
+        ]
+    },
+    {
+        "id": "c595834d6b9da3eb",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "data driver",
+        "mode": "link",
+        "links": [
+            "a5d227296860a1e9"
+        ],
+        "x": 870,
+        "y": 460,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "49e9ec156d34661c",
+        "type": "link out",
+        "z": "bf1896ca1a6fda44",
+        "name": "data vehicle",
+        "mode": "link",
+        "links": [
+            "ecbddcb9c97ff8a3"
+        ],
+        "x": 870,
+        "y": 540,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "a5d227296860a1e9",
+        "type": "link in",
+        "z": "bf1896ca1a6fda44",
+        "name": "data driver",
+        "links": [
+            "c595834d6b9da3eb"
+        ],
+        "x": 1580,
+        "y": 280,
+        "wires": [
+            [
+                "4b5fc4dbaa443a35",
+                "e79e784e3a7cd68d"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "4b5fc4dbaa443a35",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "driver_desc",
+                "pt": "flow",
+                "to": "payload[0].driver_desc",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1830,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e79e784e3a7cd68d",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "driver_name",
+                "pt": "flow",
+                "to": "payload[0].driver_name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1820,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ecbddcb9c97ff8a3",
+        "type": "link in",
+        "z": "bf1896ca1a6fda44",
+        "name": "data vehicle",
+        "links": [
+            "49e9ec156d34661c"
+        ],
+        "x": 1570,
+        "y": 620,
+        "wires": [
+            [
+                "3dc02ef79c0d20a9",
+                "4ef2c79cc5d3c3a6",
+                "f4ba6db15a7241e2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "3dc02ef79c0d20a9",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_desc",
+                "pt": "flow",
+                "to": "payload[0].vehicle_desc",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1820,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ef2c79cc5d3c3a6",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_name",
+                "pt": "flow",
+                "to": "payload[0].vehicle_name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1820,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4ba6db15a7241e2",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_number",
+                "pt": "flow",
+                "to": "payload[0].vehicle_number",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1810,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a25d4a5ee4440199",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "trans_volume",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12ab270e1db003a1",
+        "type": "function",
+        "z": "bf1896ca1a6fda44",
+        "name": "collecting data",
+        "func": "\nmsg = {\n    trans_volume: flow.get(\"trans_volume\"),\n    driver_id: flow.get(\"driver_id\"),\n    driver_desc: flow.get(\"driver_desc\"),\n    driver_name: flow.get(\"driver_name\"),\n    vehicle_id   : flow.get(\"vehicle_id\"),\n    vehicle_desc : flow.get(\"vehicle_desc\"),\n    vehicle_name : flow.get(\"vehicle_name\"),\n    vehicle_number: flow.get(\"vehicle_number\"),\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 920,
+        "wires": [
+            [
+                "22f0f7bea1ab19c0"
+            ]
+        ]
+    },
+    {
+        "id": "22f0f7bea1ab19c0",
+        "type": "function",
+        "z": "bf1896ca1a6fda44",
+        "name": "insert statement",
+        "func": "msg.topic = \"INSERT INTO transactions (trans_volume, driver_id, driver_desc, driver_name, vehicle_id, vehicle_desc, vehicle_name, vehicle_number) \" + \n    \"VALUES ('\" + msg.trans_volume + \"', '\" + msg.driver_id + \"', '\" + msg.driver_desc + \"', '\" + msg.driver_name + \"', '\" + msg.vehicle_id + \"', '\" + msg.vehicle_desc + \"', '\" + msg.vehicle_name + \"', '\" + msg.vehicle_number +\"');\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 920,
+        "wires": [
+            [
+                "cf38dbd5a1e2e5c7"
+            ]
+        ]
+    },
+    {
+        "id": "cf38dbd5a1e2e5c7",
+        "type": "mysql",
+        "z": "bf1896ca1a6fda44",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 1810,
+        "y": 920,
+        "wires": [
+            [
+                "9c2d7645622d67ce"
+            ]
+        ]
+    },
+    {
+        "id": "9c2d7645622d67ce",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "show data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT * FROM transactions ORDER BY id DESC;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2070,
+        "y": 920,
+        "wires": [
+            [
+                "517946e84c2e72c3"
+            ]
+        ]
+    },
+    {
+        "id": "f10f62664acdc1e9",
+        "type": "change",
+        "z": "bf1896ca1a6fda44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data[1]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 640,
+        "wires": [
+            [
+                "6d5ca3b0be6840a8"
+            ]
+        ]
+    },
+    {
+        "id": "95b4d80b249a5604",
+        "type": "buffer-parser",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "hex",
+                "name": "rfid",
+                "offset": 7,
+                "length": 4,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 1370,
+        "y": 280,
+        "wires": [
+            [
+                "c6a179acb32a9a27"
+            ]
+        ]
+    },
+    {
+        "id": "fb35738d0b099cad",
+        "type": "ui_toast",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "CANCEL",
+        "raw": true,
+        "className": "",
+        "topic": "Are you sure?",
+        "name": "",
+        "x": 730,
+        "y": 340,
+        "wires": [
+            [
+                "7f8f6d38fcc4b70d",
+                "3528e693367332b1"
+            ]
+        ]
+    },
+    {
+        "id": "259e6741d7337885",
+        "type": "serial request",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "",
+        "serial": "6ee71d8495acfa1f",
+        "x": 1170,
+        "y": 280,
+        "wires": [
+            [
+                "95b4d80b249a5604",
+                "70098fd7f24f0209"
+            ]
+        ]
+    },
+    {
+        "id": "7f8f6d38fcc4b70d",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "ok",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "259e6741d7337885",
+                "9fdca1537c18bf1d"
+            ]
+        ]
+    },
+    {
+        "id": "5e95789b6fb001ed",
+        "type": "mysql",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 730,
+        "y": 520,
+        "wires": [
+            [
+                "5aea4c6909ee29d4"
+            ]
+        ]
+    },
+    {
+        "id": "c6a179acb32a9a27",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "driver_id",
+                "pt": "flow",
+                "to": "payload.rfid",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 280,
+        "wires": [
+            [
+                "be4f7a4e4d5aefb5"
+            ]
+        ]
+    },
+    {
+        "id": "eaeed9d974c47b97",
+        "type": "ui_text",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "group": "339fe1241286525a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "text notification",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1360,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9fdca1537c18bf1d",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "tap message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tap your key to register!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 340,
+        "wires": [
+            [
+                "eaeed9d974c47b97",
+                "1e9bfca31f400d82"
+            ]
+        ]
+    },
+    {
+        "id": "904a61394b8b3e67",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "success message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=green>Sucess! Key has been added</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2310,
+        "y": 500,
+        "wires": [
+            [
+                "2344d699873a6636",
+                "fadc76f08bbdbc0b",
+                "8d26b053c60ecd77"
+            ]
+        ]
+    },
+    {
+        "id": "69c47e8049b33128",
+        "type": "delay",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 920,
+        "y": 420,
+        "wires": [
+            [
+                "d842e2adf3fd3fe2"
+            ]
+        ]
+    },
+    {
+        "id": "d842e2adf3fd3fe2",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "clear message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 380,
+        "wires": [
+            [
+                "eaeed9d974c47b97"
+            ]
+        ]
+    },
+    {
+        "id": "3528e693367332b1",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "cancel",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CANCEL",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 930,
+        "y": 380,
+        "wires": [
+            [
+                "d842e2adf3fd3fe2"
+            ]
+        ]
+    },
+    {
+        "id": "9026c79865de48f4",
+        "type": "ui_template",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "group": "339fe1241286525a",
+        "name": "add",
+        "order": 3,
+        "width": 3,
+        "height": 2,
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#007CBE; height: 90% !important; font-size: 16px;\" ng-click=\"send({payload: '1'})\"> \n    Add <br/>Driver\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "f4d2d33726516220",
+                "c5b180e8078c09eb"
+            ]
+        ]
+    },
+    {
+        "id": "f4d2d33726516220",
+        "type": "function",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "format notification",
+        "func": "msg.payload = `<!DOCTYPE html>\n                <html><head>\n                <title>Are you sure?</title>\n                </head>\n                <body>\n                   <div style = \"padding: 0 0.5em 0 0.5em; text-align: center;\">\n                      <p> The driver will have the privilege of refueling </p>\n                   </div>\n                </body>\n                <style>\n                   .md-title {\n                       margin-bottom: 0;\n                       font-size: 30px;\n                       text-align: center;\n                       padding: 0 0.5em 0 0.5em;\n                   }\n                </style>\n                </html>`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "fb35738d0b099cad"
+            ]
+        ]
+    },
+    {
+        "id": "2344d699873a6636",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "66b0ba1c1f1abbf6"
+        ],
+        "x": 2560,
+        "y": 500,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "66b0ba1c1f1abbf6",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "clear message",
+        "links": [
+            "1449a6dbc94aedfd",
+            "1e9bfca31f400d82",
+            "2344d699873a6636",
+            "a00d94aafd1daf30",
+            "c1beadda2b8e3804"
+        ],
+        "x": 720,
+        "y": 420,
+        "wires": [
+            [
+                "69c47e8049b33128"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "0184b6407d43762e",
+        "type": "ui_template",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "group": "d2104847dacfa161",
+        "name": "delete",
+        "order": 3,
+        "width": 3,
+        "height": 2,
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#007CBE; height: 80% !important; font-size: 16px;\" ng-click=\"send({payload: '1'})\"> \n    Delete <br/>Driver\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 310,
+        "y": 860,
+        "wires": [
+            [
+                "03da7f843913f3e3",
+                "0b986c767501094f"
+            ]
+        ]
+    },
+    {
+        "id": "1e9bfca31f400d82",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "66b0ba1c1f1abbf6"
+        ],
+        "x": 1360,
+        "y": 380,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "03da7f843913f3e3",
+        "type": "function",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "format notification",
+        "func": "msg.payload = `<!DOCTYPE html>\n                <html><head>\n                <title>Are you sure?</title>\n                </head>\n                <body>\n                   <div style = \"padding: 0 0.5em 0 0.5em; text-align: center; line-height: 0.5;\">\n                      <p> Do you really want to delete these key? </p>\n                      <p> This process cannot be undone. </p>\n                   </div>\n                </body>\n                <style>\n                   .md-title {\n                       margin-bottom: 0;\n                       font-size: 30px;\n                       text-align: center;\n                       padding: 0 0.5em 0 0.5em;\n                   }\n                </style>\n                </html>`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 860,
+        "wires": [
+            [
+                "c10c4998def92f3f"
+            ]
+        ]
+    },
+    {
+        "id": "c10c4998def92f3f",
+        "type": "ui_toast",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "CANCEL",
+        "raw": true,
+        "className": "",
+        "topic": "Are you sure?",
+        "name": "",
+        "x": 750,
+        "y": 860,
+        "wires": [
+            [
+                "074fc8d03231104e",
+                "f3ec7a154555e211"
+            ]
+        ]
+    },
+    {
+        "id": "074fc8d03231104e",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "ok",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 860,
+        "wires": [
+            [
+                "b347c776120e10b1",
+                "0d3af801168ca0bc"
+            ]
+        ]
+    },
+    {
+        "id": "f3ec7a154555e211",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "cancel",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CANCEL",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 900,
+        "wires": [
+            [
+                "cfed6e5c85a42052"
+            ]
+        ]
+    },
+    {
+        "id": "67cc45c85d72e563",
+        "type": "buffer-parser",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "hex",
+                "name": "rfid",
+                "offset": 7,
+                "length": 4,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 1390,
+        "y": 800,
+        "wires": [
+            [
+                "a9a78f36df4cccac"
+            ]
+        ]
+    },
+    {
+        "id": "b347c776120e10b1",
+        "type": "serial request",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "",
+        "serial": "6ee71d8495acfa1f",
+        "x": 1210,
+        "y": 800,
+        "wires": [
+            [
+                "67cc45c85d72e563",
+                "f6824ec8b1f08947"
+            ]
+        ]
+    },
+    {
+        "id": "a9a78f36df4cccac",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delete_driver",
+                "pt": "flow",
+                "to": "payload.rfid",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 800,
+        "wires": [
+            [
+                "82387458167fbb97"
+            ]
+        ]
+    },
+    {
+        "id": "96d90b05552bb988",
+        "type": "ui_text",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "group": "d2104847dacfa161",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "text notification",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1380,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "0d3af801168ca0bc",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "tap Messge",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tap your key to delete!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 860,
+        "wires": [
+            [
+                "96d90b05552bb988",
+                "0a4fc155a056e546"
+            ]
+        ]
+    },
+    {
+        "id": "00f25d315bf4cc90",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "remove message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=green>Sucess! Key removed</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1630,
+        "y": 1060,
+        "wires": [
+            [
+                "61e6f4a60e6f915e",
+                "2ad61ec9ae8744c0",
+                "23c9f54dcb51ab87"
+            ]
+        ]
+    },
+    {
+        "id": "cfed6e5c85a42052",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "clear message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 900,
+        "wires": [
+            [
+                "96d90b05552bb988"
+            ]
+        ]
+    },
+    {
+        "id": "61e6f4a60e6f915e",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete message",
+        "mode": "link",
+        "links": [
+            "2d2143e1b492ea41"
+        ],
+        "x": 1880,
+        "y": 1060,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "0a4fc155a056e546",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete message",
+        "mode": "link",
+        "links": [
+            "2d2143e1b492ea41"
+        ],
+        "x": 1380,
+        "y": 860,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4dfcdb23afec7bd3",
+        "type": "delay",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 940,
+        "wires": [
+            [
+                "cfed6e5c85a42052"
+            ]
+        ]
+    },
+    {
+        "id": "2d2143e1b492ea41",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete message",
+        "links": [
+            "0a4fc155a056e546",
+            "61e6f4a60e6f915e",
+            "f6b3365350f7f389",
+            "3f999768cac7badc"
+        ],
+        "x": 740,
+        "y": 940,
+        "wires": [
+            [
+                "4dfcdb23afec7bd3"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "1e59fcd76b0e889a",
+        "type": "function",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "check on drivers",
+        "func": "msg = {\n    driver_id: flow.get(\"driver_id\"),\n}\n\nmsg.topic = \"SELECT * FROM drivers WHERE driver_id='\" + msg.driver_id + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 520,
+        "wires": [
+            [
+                "5e95789b6fb001ed"
+            ]
+        ]
+    },
+    {
+        "id": "acdf2a3a594bcd23",
+        "type": "function",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "check on vehicles",
+        "func": "msg.topic = \"SELECT * FROM vehicles WHERE vehicle_id='\" + msg.driver_id + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 540,
+        "wires": [
+            [
+                "2b5955aa40802a91"
+            ]
+        ]
+    },
+    {
+        "id": "2b5955aa40802a91",
+        "type": "mysql",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 1370,
+        "y": 540,
+        "wires": [
+            [
+                "79dc2c09520925d6"
+            ]
+        ]
+    },
+    {
+        "id": "5aea4c6909ee29d4",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 520,
+        "wires": [
+            [
+                "10f64adf80b504cc"
+            ],
+            [
+                "acdf2a3a594bcd23"
+            ]
+        ]
+    },
+    {
+        "id": "10f64adf80b504cc",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "registered message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red>Failed! Key has been registered</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 500,
+        "wires": [
+            [
+                "eaeed9d974c47b97",
+                "1e9bfca31f400d82"
+            ]
+        ]
+    },
+    {
+        "id": "5f28bdeaf34de961",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "registered message",
+        "links": [
+            "cca79196ce0da93e",
+            "fadc76f08bbdbc0b"
+        ],
+        "x": 1130,
+        "y": 420,
+        "wires": [
+            [
+                "eaeed9d974c47b97"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "fadc76f08bbdbc0b",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "registered message",
+        "mode": "link",
+        "links": [
+            "5f28bdeaf34de961",
+            "a92002d7245afce6"
+        ],
+        "x": 2550,
+        "y": 540,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "79dc2c09520925d6",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1630,
+        "y": 540,
+        "wires": [
+            [
+                "d62a5962b55fc05c"
+            ],
+            [
+                "1d2c2f56fc2fdeed"
+            ]
+        ]
+    },
+    {
+        "id": "1d2c2f56fc2fdeed",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "registered message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red>Failed! Key has been registered</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1830,
+        "y": 560,
+        "wires": [
+            [
+                "1449a6dbc94aedfd",
+                "cca79196ce0da93e"
+            ]
+        ]
+    },
+    {
+        "id": "1449a6dbc94aedfd",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "66b0ba1c1f1abbf6"
+        ],
+        "x": 2080,
+        "y": 560,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "cca79196ce0da93e",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "registered message",
+        "mode": "link",
+        "links": [
+            "5f28bdeaf34de961",
+            "a92002d7245afce6"
+        ],
+        "x": 2070,
+        "y": 600,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "be4f7a4e4d5aefb5",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "check data",
+        "mode": "link",
+        "links": [
+            "bed152e0188e562d"
+        ],
+        "x": 1850,
+        "y": 280,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "bed152e0188e562d",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "check data",
+        "links": [
+            "be4f7a4e4d5aefb5"
+        ],
+        "x": 280,
+        "y": 520,
+        "wires": [
+            [
+                "1e59fcd76b0e889a"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d62a5962b55fc05c",
+        "type": "function",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "insert statement",
+        "func": "msg.topic = \"INSERT INTO drivers (driver_id) \" + \n    \"VALUES (UPPER('\" + msg.driver_id +\"'));\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1840,
+        "y": 520,
+        "wires": [
+            [
+                "4933c045a6cd7f35"
+            ]
+        ]
+    },
+    {
+        "id": "4933c045a6cd7f35",
+        "type": "mysql",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 2090,
+        "y": 500,
+        "wires": [
+            [
+                "904a61394b8b3e67"
+            ]
+        ]
+    },
+    {
+        "id": "82387458167fbb97",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete driver",
+        "mode": "link",
+        "links": [
+            "f2906a5e897312a8"
+        ],
+        "x": 1890,
+        "y": 800,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f2906a5e897312a8",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete driver",
+        "links": [
+            "82387458167fbb97"
+        ],
+        "x": 290,
+        "y": 1040,
+        "wires": [
+            [
+                "4a40435d431c200b"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "4a40435d431c200b",
+        "type": "function",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "check on drivers",
+        "func": "msg = {\n    delete_driver: flow.get(\"delete_driver\"),\n}\n\nmsg.topic = \"SELECT * FROM drivers WHERE driver_id='\" + msg.delete_driver + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1040,
+        "wires": [
+            [
+                "14e7983f9cb53798"
+            ]
+        ]
+    },
+    {
+        "id": "14e7983f9cb53798",
+        "type": "mysql",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 750,
+        "y": 1040,
+        "wires": [
+            [
+                "cc29b55aa76224c3"
+            ]
+        ]
+    },
+    {
+        "id": "cc29b55aa76224c3",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 950,
+        "y": 1040,
+        "wires": [
+            [
+                "55a48e39a1f6f272"
+            ],
+            [
+                "23707b1b8adb58c1"
+            ]
+        ]
+    },
+    {
+        "id": "55a48e39a1f6f272",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "not found message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red>Failed! Key not found</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 1020,
+        "wires": [
+            [
+                "96d90b05552bb988",
+                "f6b3365350f7f389"
+            ]
+        ]
+    },
+    {
+        "id": "f6b3365350f7f389",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete message",
+        "mode": "link",
+        "links": [
+            "2d2143e1b492ea41"
+        ],
+        "x": 1380,
+        "y": 1020,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "23707b1b8adb58c1",
+        "type": "function",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete statement",
+        "func": "msg.topic = \"DELETE FROM drivers WHERE driver_id='\" + msg.delete_driver + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1060,
+        "wires": [
+            [
+                "0aac35d548772383"
+            ]
+        ]
+    },
+    {
+        "id": "0aac35d548772383",
+        "type": "mysql",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 1390,
+        "y": 1060,
+        "wires": [
+            [
+                "00f25d315bf4cc90"
+            ]
+        ]
+    },
+    {
+        "id": "2ad61ec9ae8744c0",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "remove message",
+        "mode": "link",
+        "links": [
+            "87ded6f51893a862"
+        ],
+        "x": 1870,
+        "y": 1020,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "87ded6f51893a862",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "remove message",
+        "links": [
+            "2ad61ec9ae8744c0"
+        ],
+        "x": 1160,
+        "y": 940,
+        "wires": [
+            [
+                "96d90b05552bb988"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "5ebef75bbb231b31",
+        "type": "ui_table",
+        "z": "22a807a2a8536b15",
+        "g": "78218c677a5b311f",
+        "group": "9b246d8416b44c2d",
+        "name": "display drivers",
+        "order": 1,
+        "width": 12,
+        "height": 9,
+        "columns": [
+            {
+                "field": "driver_id",
+                "title": "Key / Code",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_name",
+                "title": "Driver Name",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "driver_desc",
+                "title": "License Class",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1160,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "8e3987d96a45436a",
+        "type": "delay",
+        "z": "22a807a2a8536b15",
+        "g": "78218c677a5b311f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "210",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 1220,
+        "wires": [
+            [
+                "2d88f43bbc223981"
+            ]
+        ]
+    },
+    {
+        "id": "2d88f43bbc223981",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "78218c677a5b311f",
+        "name": "show data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT * FROM drivers;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 1220,
+        "wires": [
+            [
+                "daaeaf3bda9fa1b7"
+            ]
+        ]
+    },
+    {
+        "id": "23c9f54dcb51ab87",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "view data",
+        "mode": "link",
+        "links": [
+            "dca8ba01dc70e0de",
+            "47e5fadba5c895c2"
+        ],
+        "x": 1900,
+        "y": 1100,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "8d26b053c60ecd77",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "view data",
+        "mode": "link",
+        "links": [
+            "dca8ba01dc70e0de",
+            "47e5fadba5c895c2"
+        ],
+        "x": 2580,
+        "y": 460,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "dca8ba01dc70e0de",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "78218c677a5b311f",
+        "name": "view data",
+        "links": [
+            "23c9f54dcb51ab87",
+            "8d26b053c60ecd77",
+            "f52f357780243dfa",
+            "5ee95b3b0b3baa01",
+            "186fc57c33d3ac6f",
+            "cff154594b78d94d",
+            "c5b180e8078c09eb",
+            "0b986c767501094f"
+        ],
+        "x": 280,
+        "y": 1220,
+        "wires": [
+            [
+                "8e3987d96a45436a"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "daaeaf3bda9fa1b7",
+        "type": "mysql",
+        "z": "22a807a2a8536b15",
+        "g": "78218c677a5b311f",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 930,
+        "y": 1220,
+        "wires": [
+            [
+                "5ebef75bbb231b31"
+            ]
+        ]
+    },
+    {
+        "id": "6e8ba7f697013fde",
+        "type": "ui_template",
+        "z": "22a807a2a8536b15",
+        "g": "78218c677a5b311f",
+        "group": "339fe1241286525a",
+        "name": "tabulator",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .tabulator {\n\n    }\n\n    /****/\n\n    /* Header formatieren */\n    .tabulator-col-title {\n    text-align: center;\n    }\n\n    /****/\n    .tabulator .tabulator-header {\n\n    }\n\n    .tabulator-col-content {\n\n    }\n\n    .tabulator .tabulator-header .tabulator-col {\n\n    }\n\n    .tabulator-arrow {\n\n    }\n\n    .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {\n\n    }\n\n    /* Zellen formatieren*/\n    .tabulator-table .tabulator-row-odd {\n        background-color: #efefef;\n\n    }\n\n    /****/\n    .tabulator-table .tabulator-row-even {\n\n    }\n\n    /****/\n    .tabulator-row .tabulator-cell {\n\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1180,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d8c5e9814e931d1",
+        "type": "inject",
+        "z": "22a807a2a8536b15",
+        "g": "78218c677a5b311f",
+        "name": "",
+        "props": [],
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 1260,
+        "wires": [
+            [
+                "8e3987d96a45436a"
+            ]
+        ]
+    },
+    {
+        "id": "70098fd7f24f0209",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "request timeout",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1360,
+        "y": 240,
+        "wires": [
+            [
+                "18e21503610da303"
+            ]
+        ]
+    },
+    {
+        "id": "18e21503610da303",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "request timeout",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Request timeout!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 240,
+        "wires": [
+            [
+                "9818613932780aa8",
+                "c1beadda2b8e3804"
+            ]
+        ]
+    },
+    {
+        "id": "9818613932780aa8",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "add timeout",
+        "mode": "link",
+        "links": [
+            "b8804214c0ed111e"
+        ],
+        "x": 1850,
+        "y": 240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f6824ec8b1f08947",
+        "type": "switch",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "request timeout",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1380,
+        "y": 760,
+        "wires": [
+            [
+                "8156dbc625d9c3aa"
+            ]
+        ]
+    },
+    {
+        "id": "8156dbc625d9c3aa",
+        "type": "change",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "request timeout",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Request timeout!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 760,
+        "wires": [
+            [
+                "cb5faadde127d23b",
+                "3f999768cac7badc"
+            ]
+        ]
+    },
+    {
+        "id": "cb5faadde127d23b",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete timeout",
+        "mode": "link",
+        "links": [
+            "d279309ac67e8cda"
+        ],
+        "x": 1880,
+        "y": 760,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "c1beadda2b8e3804",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "66b0ba1c1f1abbf6"
+        ],
+        "x": 1840,
+        "y": 200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "b8804214c0ed111e",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "add timeout",
+        "links": [
+            "9818613932780aa8"
+        ],
+        "x": 1150,
+        "y": 460,
+        "wires": [
+            [
+                "eaeed9d974c47b97"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "3f999768cac7badc",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete message",
+        "mode": "link",
+        "links": [
+            "2d2143e1b492ea41"
+        ],
+        "x": 1880,
+        "y": 720,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "d279309ac67e8cda",
+        "type": "link in",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "delete timeout",
+        "links": [
+            "cb5faadde127d23b"
+        ],
+        "x": 1170,
+        "y": 980,
+        "wires": [
+            [
+                "96d90b05552bb988"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "c5b180e8078c09eb",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "f32b56fa06cace8a",
+        "name": "view data",
+        "mode": "link",
+        "links": [
+            "dca8ba01dc70e0de",
+            "47e5fadba5c895c2"
+        ],
+        "x": 460,
+        "y": 380,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "0b986c767501094f",
+        "type": "link out",
+        "z": "22a807a2a8536b15",
+        "g": "700a70cc805fd2e6",
+        "name": "view data",
+        "mode": "link",
+        "links": [
+            "dca8ba01dc70e0de",
+            "47e5fadba5c895c2"
+        ],
+        "x": 480,
+        "y": 900,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "457c66dd3a22c9a1",
+        "type": "buffer-parser",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "hex",
+                "name": "rfid",
+                "offset": 7,
+                "length": 4,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 1350,
+        "y": 240,
+        "wires": [
+            [
+                "c00654da0f097538"
+            ]
+        ]
+    },
+    {
+        "id": "1677c74c4ecec3f9",
+        "type": "ui_toast",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "CANCEL",
+        "raw": true,
+        "className": "",
+        "topic": "Are you sure?",
+        "name": "",
+        "x": 730,
+        "y": 300,
+        "wires": [
+            [
+                "a7e4090d4286b321",
+                "85d1f166a9cfed88"
+            ]
+        ]
+    },
+    {
+        "id": "05378e743b328086",
+        "type": "serial request",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "",
+        "serial": "6ee71d8495acfa1f",
+        "x": 1170,
+        "y": 240,
+        "wires": [
+            [
+                "457c66dd3a22c9a1",
+                "ed94f36ce3060336"
+            ]
+        ]
+    },
+    {
+        "id": "a7e4090d4286b321",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "ok",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 930,
+        "y": 300,
+        "wires": [
+            [
+                "05378e743b328086",
+                "0304a78ad453247f"
+            ]
+        ]
+    },
+    {
+        "id": "225da4cae0c3f990",
+        "type": "mysql",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 730,
+        "y": 480,
+        "wires": [
+            [
+                "eeaae78bea7630ac"
+            ]
+        ]
+    },
+    {
+        "id": "c00654da0f097538",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vehicle_id",
+                "pt": "flow",
+                "to": "payload.rfid",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 240,
+        "wires": [
+            [
+                "7be46be135bddb1d"
+            ]
+        ]
+    },
+    {
+        "id": "7f9de29a66861832",
+        "type": "ui_text",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "group": "62c3b4bcf79562db",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "text notification",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1360,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0304a78ad453247f",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "tap message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tap your key to register!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 300,
+        "wires": [
+            [
+                "7f9de29a66861832",
+                "a63d854679a8bbbb"
+            ]
+        ]
+    },
+    {
+        "id": "92f5fb60133d0ed6",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "success message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=green>Sucess! Key has been added</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2310,
+        "y": 460,
+        "wires": [
+            [
+                "43175cc2d0ec12ba",
+                "0f93a9624c841785",
+                "b3820e7bd86848a8"
+            ]
+        ]
+    },
+    {
+        "id": "2343fb9a404f38a0",
+        "type": "delay",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 920,
+        "y": 380,
+        "wires": [
+            [
+                "ff447c3c05e85608"
+            ]
+        ]
+    },
+    {
+        "id": "ff447c3c05e85608",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "clear message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 340,
+        "wires": [
+            [
+                "7f9de29a66861832"
+            ]
+        ]
+    },
+    {
+        "id": "85d1f166a9cfed88",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "cancel",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CANCEL",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "ff447c3c05e85608"
+            ]
+        ]
+    },
+    {
+        "id": "e2ff9051e315f2a2",
+        "type": "ui_template",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "group": "62c3b4bcf79562db",
+        "name": "add",
+        "order": 3,
+        "width": 3,
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\"\n    style=\"background-color:#007CBE; height: 90% !important; font-size: 16px;\" ng-click=\"send({payload: '1'})\">\n    Add <br/>Vehicle\n</md-button>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "5ab816d7c47fa864",
+                "cf27f9c7274dbc86"
+            ]
+        ]
+    },
+    {
+        "id": "5ab816d7c47fa864",
+        "type": "function",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "format notification",
+        "func": "msg.payload = `<!DOCTYPE html>\n                <html><head>\n                <title>Are you sure?</title>\n                </head>\n                <body>\n                   <div style = \"padding: 0 0.5em 0 0.5em; text-align: center;\">\n                      <p> The vehicle will have the privilege of refueling </p>\n                   </div>\n                </body>\n                <style>\n                   .md-title {\n                       margin-bottom: 0;\n                       font-size: 30px;\n                       text-align: center;\n                       padding: 0 0.5em 0 0.5em;\n                   }\n                </style>\n                </html>`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 300,
+        "wires": [
+            [
+                "1677c74c4ecec3f9"
+            ]
+        ]
+    },
+    {
+        "id": "43175cc2d0ec12ba",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "48aa09445a37674d"
+        ],
+        "x": 2560,
+        "y": 460,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "48aa09445a37674d",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "clear message",
+        "links": [
+            "02cea55159e1db96",
+            "a63d854679a8bbbb",
+            "43175cc2d0ec12ba",
+            "a00d94aafd1daf30",
+            "4d5662615d47bf59",
+            "69bbc193505cccf7"
+        ],
+        "x": 720,
+        "y": 380,
+        "wires": [
+            [
+                "2343fb9a404f38a0"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a63d854679a8bbbb",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "48aa09445a37674d"
+        ],
+        "x": 1360,
+        "y": 340,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "793bea21c6b25a7a",
+        "type": "function",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "check on drivers",
+        "func": "msg = {\n    vehicle_id: flow.get(\"vehicle_id\"),\n}\n\nmsg.topic = \"SELECT * FROM drivers WHERE driver_id='\" + msg.vehicle_id + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 480,
+        "wires": [
+            [
+                "225da4cae0c3f990"
+            ]
+        ]
+    },
+    {
+        "id": "c78fd8a78af67d5f",
+        "type": "function",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "check on vehicles",
+        "func": "msg.topic = \"SELECT * FROM vehicles WHERE vehicle_id='\" + msg.vehicle_id + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 500,
+        "wires": [
+            [
+                "f39040f1af0f56be"
+            ]
+        ]
+    },
+    {
+        "id": "f39040f1af0f56be",
+        "type": "mysql",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 1350,
+        "y": 500,
+        "wires": [
+            [
+                "4295550b9b84db4e"
+            ]
+        ]
+    },
+    {
+        "id": "eeaae78bea7630ac",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 480,
+        "wires": [
+            [
+                "7d92be940938ccaf"
+            ],
+            [
+                "c78fd8a78af67d5f"
+            ]
+        ]
+    },
+    {
+        "id": "7d92be940938ccaf",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "registered message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red>Failed! Key has been registered</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 460,
+        "wires": [
+            [
+                "7f9de29a66861832",
+                "a63d854679a8bbbb"
+            ]
+        ]
+    },
+    {
+        "id": "2b7aafc51ff2a6f9",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "registered message",
+        "links": [
+            "7794081b608ec711",
+            "0f93a9624c841785"
+        ],
+        "x": 1130,
+        "y": 380,
+        "wires": [
+            [
+                "7f9de29a66861832"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "0f93a9624c841785",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "registered message",
+        "mode": "link",
+        "links": [
+            "2b7aafc51ff2a6f9"
+        ],
+        "x": 2550,
+        "y": 500,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4295550b9b84db4e",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1630,
+        "y": 500,
+        "wires": [
+            [
+                "bade2067e36a739d"
+            ],
+            [
+                "182d84456fd5b6e5"
+            ]
+        ]
+    },
+    {
+        "id": "182d84456fd5b6e5",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "registered message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red>Failed! Key has been registered</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1830,
+        "y": 520,
+        "wires": [
+            [
+                "02cea55159e1db96",
+                "7794081b608ec711"
+            ]
+        ]
+    },
+    {
+        "id": "02cea55159e1db96",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "48aa09445a37674d"
+        ],
+        "x": 2080,
+        "y": 520,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7794081b608ec711",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "registered message",
+        "mode": "link",
+        "links": [
+            "2b7aafc51ff2a6f9"
+        ],
+        "x": 2070,
+        "y": 560,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7be46be135bddb1d",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "check data",
+        "mode": "link",
+        "links": [
+            "da17d1d1a58a5f25"
+        ],
+        "x": 1850,
+        "y": 240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "da17d1d1a58a5f25",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "check data",
+        "links": [
+            "7be46be135bddb1d"
+        ],
+        "x": 280,
+        "y": 480,
+        "wires": [
+            [
+                "793bea21c6b25a7a"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "bade2067e36a739d",
+        "type": "function",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "insert statement",
+        "func": "msg.topic = \"INSERT INTO vehicles (vehicle_id) \" + \n    \"VALUES (UPPER('\" + msg.vehicle_id +\"'));\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1840,
+        "y": 480,
+        "wires": [
+            [
+                "9456f54a33a3184d"
+            ]
+        ]
+    },
+    {
+        "id": "9456f54a33a3184d",
+        "type": "mysql",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 2090,
+        "y": 460,
+        "wires": [
+            [
+                "92f5fb60133d0ed6"
+            ]
+        ]
+    },
+    {
+        "id": "6ff850ea283b06c5",
+        "type": "ui_template",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "group": "771f70e853e5665b",
+        "name": "delete",
+        "order": 3,
+        "width": 3,
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\"\n    style=\"background-color:#007CBE; height: 80% !important; font-size: 16px;\" ng-click=\"send({payload: '1'})\">\n    Delete <br/>Vehicle\n</md-button>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "b6ada05cef95b26d",
+                "0adcc5fb22c63ab2"
+            ]
+        ]
+    },
+    {
+        "id": "b6ada05cef95b26d",
+        "type": "function",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "format notification",
+        "func": "msg.payload = `<!DOCTYPE html>\n                <html><head>\n                <title>Are you sure?</title>\n                </head>\n                <body>\n                   <div style = \"padding: 0 0.5em 0 0.5em; text-align: center; line-height: 0.5;\">\n                      <p> Do you really want to delete these key? </p>\n                      <p> This process cannot be undone. </p>\n                   </div>\n                </body>\n                <style>\n                   .md-title {\n                       margin-bottom: 0;\n                       font-size: 30px;\n                       text-align: center;\n                       padding: 0 0.5em 0 0.5em;\n                   }\n                </style>\n                </html>`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 840,
+        "wires": [
+            [
+                "aefdc18ee7f8ab75"
+            ]
+        ]
+    },
+    {
+        "id": "aefdc18ee7f8ab75",
+        "type": "ui_toast",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "CANCEL",
+        "raw": true,
+        "className": "",
+        "topic": "Are you sure?",
+        "name": "",
+        "x": 750,
+        "y": 840,
+        "wires": [
+            [
+                "9dc4edfb2c2dbb64",
+                "c717dd5e88ccf09a"
+            ]
+        ]
+    },
+    {
+        "id": "9dc4edfb2c2dbb64",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "ok",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 840,
+        "wires": [
+            [
+                "b2e0598f222c0443",
+                "4fd7a937d72ed45e"
+            ]
+        ]
+    },
+    {
+        "id": "c717dd5e88ccf09a",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "cancel",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CANCEL",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 880,
+        "wires": [
+            [
+                "18c0df6e244d3944"
+            ]
+        ]
+    },
+    {
+        "id": "2d2cc1096d1f4efb",
+        "type": "buffer-parser",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "hex",
+                "name": "rfid",
+                "offset": 7,
+                "length": 4,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 1390,
+        "y": 780,
+        "wires": [
+            [
+                "6ed76c02694acd94"
+            ]
+        ]
+    },
+    {
+        "id": "b2e0598f222c0443",
+        "type": "serial request",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "",
+        "serial": "6ee71d8495acfa1f",
+        "x": 1190,
+        "y": 780,
+        "wires": [
+            [
+                "2d2cc1096d1f4efb",
+                "d68114ea545f7882"
+            ]
+        ]
+    },
+    {
+        "id": "6ed76c02694acd94",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delete_vehicle",
+                "pt": "flow",
+                "to": "payload.rfid",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 780,
+        "wires": [
+            [
+                "9a13cbe7240898b2"
+            ]
+        ]
+    },
+    {
+        "id": "c8705999a5d68da1",
+        "type": "ui_text",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "group": "771f70e853e5665b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "text notification",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1380,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "4fd7a937d72ed45e",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "tap Messge",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Tap your key to delete!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 840,
+        "wires": [
+            [
+                "c8705999a5d68da1",
+                "da313a68df59aafe"
+            ]
+        ]
+    },
+    {
+        "id": "a17e49ee629f6a88",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "remove message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=green>Sucess! Key removed</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1630,
+        "y": 1040,
+        "wires": [
+            [
+                "0d053a8aba00f86e",
+                "2edcd418cd128094",
+                "e84921f2520ad356"
+            ]
+        ]
+    },
+    {
+        "id": "18c0df6e244d3944",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "clear message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 880,
+        "wires": [
+            [
+                "c8705999a5d68da1"
+            ]
+        ]
+    },
+    {
+        "id": "0d053a8aba00f86e",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete message",
+        "mode": "link",
+        "links": [
+            "26e2e13d085b04d0"
+        ],
+        "x": 1880,
+        "y": 1040,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "da313a68df59aafe",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete message",
+        "mode": "link",
+        "links": [
+            "26e2e13d085b04d0"
+        ],
+        "x": 1380,
+        "y": 840,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1abe18759dec2b47",
+        "type": "delay",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 920,
+        "wires": [
+            [
+                "18c0df6e244d3944"
+            ]
+        ]
+    },
+    {
+        "id": "26e2e13d085b04d0",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete message",
+        "links": [
+            "da313a68df59aafe",
+            "0d053a8aba00f86e",
+            "7d3be2b6951bf428",
+            "1d2d0df69bd70a2c"
+        ],
+        "x": 740,
+        "y": 920,
+        "wires": [
+            [
+                "1abe18759dec2b47"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "9a13cbe7240898b2",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete driver",
+        "mode": "link",
+        "links": [
+            "eaad5bfd769cb9cd"
+        ],
+        "x": 1890,
+        "y": 780,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "eaad5bfd769cb9cd",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete driver",
+        "links": [
+            "9a13cbe7240898b2"
+        ],
+        "x": 290,
+        "y": 1020,
+        "wires": [
+            [
+                "ad4cb257af1807bb"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "ad4cb257af1807bb",
+        "type": "function",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "check on drivers",
+        "func": "msg = {\n    delete_vehicle: flow.get(\"delete_vehicle\"),\n}\n\nmsg.topic = \"SELECT * FROM vehicles WHERE vehicle_id='\" + msg.delete_vehicle + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1020,
+        "wires": [
+            [
+                "17b5d5b3ada9253c"
+            ]
+        ]
+    },
+    {
+        "id": "17b5d5b3ada9253c",
+        "type": "mysql",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 750,
+        "y": 1020,
+        "wires": [
+            [
+                "b118e5a4b37ca9c8"
+            ]
+        ]
+    },
+    {
+        "id": "b118e5a4b37ca9c8",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 950,
+        "y": 1020,
+        "wires": [
+            [
+                "76cb8035a93c8c1f"
+            ],
+            [
+                "f636e46101d7388e"
+            ]
+        ]
+    },
+    {
+        "id": "76cb8035a93c8c1f",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "not found message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<font color=red>Failed! Key not found</font>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 1000,
+        "wires": [
+            [
+                "c8705999a5d68da1",
+                "7d3be2b6951bf428"
+            ]
+        ]
+    },
+    {
+        "id": "7d3be2b6951bf428",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete message",
+        "mode": "link",
+        "links": [
+            "26e2e13d085b04d0"
+        ],
+        "x": 1380,
+        "y": 1000,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f636e46101d7388e",
+        "type": "function",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete statement",
+        "func": "msg.topic = \"DELETE FROM vehicles WHERE vehicle_id='\" + msg.delete_vehicle + \"';\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1040,
+        "wires": [
+            [
+                "6416371bad6dcaa7"
+            ]
+        ]
+    },
+    {
+        "id": "6416371bad6dcaa7",
+        "type": "mysql",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 1390,
+        "y": 1040,
+        "wires": [
+            [
+                "a17e49ee629f6a88"
+            ]
+        ]
+    },
+    {
+        "id": "2edcd418cd128094",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "remove message",
+        "mode": "link",
+        "links": [
+            "04d5f560f625c3bf"
+        ],
+        "x": 1870,
+        "y": 1000,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "04d5f560f625c3bf",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "remove message",
+        "links": [
+            "2edcd418cd128094"
+        ],
+        "x": 1160,
+        "y": 920,
+        "wires": [
+            [
+                "c8705999a5d68da1"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "379da53731ee620e",
+        "type": "delay",
+        "z": "b44a20cce056e1e4",
+        "g": "9a3417e1e68984af",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "210",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 1220,
+        "wires": [
+            [
+                "3e4e06fd0cb24185"
+            ]
+        ]
+    },
+    {
+        "id": "3e4e06fd0cb24185",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "9a3417e1e68984af",
+        "name": "show data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT * FROM vehicles;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 1220,
+        "wires": [
+            [
+                "ed1f62cbb3697f52"
+            ]
+        ]
+    },
+    {
+        "id": "ed1f62cbb3697f52",
+        "type": "mysql",
+        "z": "b44a20cce056e1e4",
+        "g": "9a3417e1e68984af",
+        "mydb": "e179a460df208a4e",
+        "name": "",
+        "x": 870,
+        "y": 1220,
+        "wires": [
+            [
+                "f880e0d5827a0094"
+            ]
+        ]
+    },
+    {
+        "id": "ddad35169b146f31",
+        "type": "ui_template",
+        "z": "b44a20cce056e1e4",
+        "g": "9a3417e1e68984af",
+        "group": "62c3b4bcf79562db",
+        "name": "tabulator",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .tabulator {\n\n    }\n\n    /****/\n\n    /* Header formatieren */\n    .tabulator-col-title {\n    text-align: center;\n    }\n\n    /****/\n    .tabulator .tabulator-header {\n\n    }\n\n    .tabulator-col-content {\n\n    }\n\n    .tabulator .tabulator-header .tabulator-col {\n\n    }\n\n    .tabulator-arrow {\n\n    }\n\n    .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {\n\n    }\n\n    /* Zellen formatieren*/\n    .tabulator-table .tabulator-row-odd {\n        background-color: #efefef;\n\n    }\n\n    /****/\n    .tabulator-table .tabulator-row-even {\n\n    }\n\n    /****/\n    .tabulator-row .tabulator-cell {\n\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1100,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0492f7d863b0e43",
+        "type": "inject",
+        "z": "b44a20cce056e1e4",
+        "g": "9a3417e1e68984af",
+        "name": "",
+        "props": [],
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 1260,
+        "wires": [
+            [
+                "379da53731ee620e"
+            ]
+        ]
+    },
+    {
+        "id": "f880e0d5827a0094",
+        "type": "ui_table",
+        "z": "b44a20cce056e1e4",
+        "g": "9a3417e1e68984af",
+        "group": "86ee9c0974c2067f",
+        "name": "display vehicles",
+        "order": 4,
+        "width": 12,
+        "height": "9",
+        "columns": [
+            {
+                "field": "vehicle_id",
+                "title": "Key / Code",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_desc",
+                "title": "Description",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_name",
+                "title": "Make",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "vehicle_number",
+                "title": "Registration",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1080,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "e84921f2520ad356",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "view vehicles",
+        "mode": "link",
+        "links": [
+            "dd570172eb99caf0"
+        ],
+        "x": 1890,
+        "y": 1080,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "b3820e7bd86848a8",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "view vehicles",
+        "mode": "link",
+        "links": [
+            "dd570172eb99caf0"
+        ],
+        "x": 2570,
+        "y": 420,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "dd570172eb99caf0",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "9a3417e1e68984af",
+        "name": "view vehicles",
+        "links": [
+            "b3820e7bd86848a8",
+            "e84921f2520ad356",
+            "cf27f9c7274dbc86",
+            "0adcc5fb22c63ab2"
+        ],
+        "x": 290,
+        "y": 1220,
+        "wires": [
+            [
+                "379da53731ee620e"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "ed94f36ce3060336",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "request timeout",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1360,
+        "y": 200,
+        "wires": [
+            [
+                "fc3e166d89058856"
+            ]
+        ]
+    },
+    {
+        "id": "fc3e166d89058856",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "request timeout",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Request timeout!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 200,
+        "wires": [
+            [
+                "da38b40613f99db9",
+                "4d5662615d47bf59"
+            ]
+        ]
+    },
+    {
+        "id": "4d5662615d47bf59",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "clear message",
+        "mode": "link",
+        "links": [
+            "48aa09445a37674d"
+        ],
+        "x": 1840,
+        "y": 160,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "da38b40613f99db9",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "add timeout",
+        "mode": "link",
+        "links": [
+            "9313b49708c293b3"
+        ],
+        "x": 1850,
+        "y": 200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "9313b49708c293b3",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "add timeout",
+        "links": [
+            "da38b40613f99db9"
+        ],
+        "x": 1150,
+        "y": 420,
+        "wires": [
+            [
+                "7f9de29a66861832"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d68114ea545f7882",
+        "type": "switch",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "request timeout",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1380,
+        "y": 740,
+        "wires": [
+            [
+                "3b1df35171b1075c"
+            ]
+        ]
+    },
+    {
+        "id": "3b1df35171b1075c",
+        "type": "change",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "request timeout",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Request timeout!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 740,
+        "wires": [
+            [
+                "1d2d0df69bd70a2c",
+                "c670363b97e5ad0f"
+            ]
+        ]
+    },
+    {
+        "id": "1d2d0df69bd70a2c",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete message",
+        "mode": "link",
+        "links": [
+            "26e2e13d085b04d0"
+        ],
+        "x": 1880,
+        "y": 700,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "c670363b97e5ad0f",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete timeout",
+        "mode": "link",
+        "links": [
+            "ffd0036d08345d49"
+        ],
+        "x": 1880,
+        "y": 740,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ffd0036d08345d49",
+        "type": "link in",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "delete timeout",
+        "links": [
+            "c670363b97e5ad0f"
+        ],
+        "x": 1170,
+        "y": 960,
+        "wires": [
+            [
+                "c8705999a5d68da1"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "cf27f9c7274dbc86",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "2a98742b23419b62",
+        "name": "view vehicles",
+        "mode": "link",
+        "links": [
+            "dd570172eb99caf0"
+        ],
+        "x": 470,
+        "y": 340,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "0adcc5fb22c63ab2",
+        "type": "link out",
+        "z": "b44a20cce056e1e4",
+        "g": "b4c7c849b202ecdf",
+        "name": "view vehicles",
+        "mode": "link",
+        "links": [
+            "dd570172eb99caf0"
+        ],
+        "x": 490,
+        "y": 880,
+        "wires": [],
+        "l": true
+    }
+]
